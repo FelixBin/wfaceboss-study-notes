@@ -4,6 +4,7 @@
 
 ## 容器交付流程
 
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0305/152423_3717ad13_1678378.png "流程.png")
 - 开发代码阶段
   - 编写代码
   - 编写Dockerfile【打镜像做准备】
