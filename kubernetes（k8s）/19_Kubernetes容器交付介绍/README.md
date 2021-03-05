@@ -23,6 +23,7 @@
   - 应用升级
 
 ## k8s部署Java项目流程
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0305/152844_5da2b9d8_1678378.png "部署java项目流程.png")
 
 - 制作镜像【Dockerfile】
 - 上传到镜像仓库【Dockerhub、阿里云、网易】
