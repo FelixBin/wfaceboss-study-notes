@@ -1,5 +1,3 @@
-参考视频：[[nginx 学习视频]{.ul}](https://www.bilibili.com/video/BV1zJ411w7SV?p=1)
-
 # 第一章 Nginx 简介
 
 ## 1.1 Nginx 概述
@@ -20,19 +18,19 @@ Nginx 可以作为静态页面的 web 服务器，同时还支持 CGI 协议的�
 
 问 Internet，则需要通过代理服务器来访问，这种代理服务就称为正向代理。
 
-![image-20210305164800806](C:\Users\86189\AppData\Roaming\Typora\typora-user-images\image-20210305164800806.png)
+![image-20210305171700308](README.assets/image-20210305171700308.png)
 
 ## **1.4 反向代理**
 
 反向代理，其实客户端对代理是无感知的，因为客户端不需要任何配置就可以访问，我们只需要将请求发送到反向代理服务器，由反向代理服务器去选择目标服务器获取数据后，在返回给客户端，此时反向代理服务器和目标服务器对外就是一个服务器，暴露的是代理服务器地址，隐藏了真实服务器 IP 地址。
 
-![image-20210305164813423](C:\Users\86189\AppData\Roaming\Typora\typora-user-images\image-20210305164813423.png)
+![image-20210305171711421](README.assets/image-20210305171711421.png)
 
 ## **1.5 负载均衡**
 
 客户端发送多个请求到服务器，服务器处理请求，有一些可能要与数据库进行交互，服务器处理完毕后，再将结果返回给客户端。
 
-![image-20210305164823888](C:\Users\86189\AppData\Roaming\Typora\typora-user-images\image-20210305164823888.png)
+![image-20210305171718199](README.assets/image-20210305171718199.png)
 
 这种架构模式对于早期的系统相对单一，并发请求相对较少的情况下是比较适合的，成本也低。
 
@@ -42,9 +40,9 @@ Nginx 可以作为静态页面的 web 服务器，同时还支持 CGI 协议的�
 
 上面的分析我们去掉了增加服务器物理配置来解决问题的办法，也就是说纵向解决问题的办法行不通了，那么横向增加服务器的数量呢？这时候集群的概念产生了，单个服务器解决不了，我们**增加服务器的数量，然后将请求分发到各个服务器上，将原先请求集中到单个服务器上的情况改为将请求分发到多个服务器上，将负载分发到不同的服务器**，也就是我们所说的**负载均衡(服务器集群)**
 
-![image-20210305164843090](C:\Users\86189\AppData\Roaming\Typora\typora-user-images\image-20210305164843090.png)
+![image-20210305171726199](README.assets/image-20210305171726199.png)
 
-![image-20210305164848351](C:\Users\86189\AppData\Roaming\Typora\typora-user-images\image-20210305164848351.png)
+![image-20210305171731993](README.assets/image-20210305171731993.png)
 
 ## **1.6 动静分离**
 
@@ -52,17 +50,19 @@ Nginx 可以作为静态页面的 web 服务器，同时还支持 CGI 协议的�
 
 原始访问方式：
 
-![image-20210305164857401](C:\Users\86189\AppData\Roaming\Typora\typora-user-images\image-20210305164857401.png)
+![image-20210305171740918](README.assets/image-20210305171740918.png)
 
 缺点：给tomcat带来更大的压力，解决办法为采用动静分离。
 
 使用代理服务器动静分离后：
 
-![image-20210305164906365](C:\Users\86189\AppData\Roaming\Typora\typora-user-images\image-20210305164906365.png)
+![image-20210305171747608](README.assets/image-20210305171747608.png)
 
 
 
-![image-20210305164911568](C:\Users\86189\AppData\Roaming\Typora\typora-user-images\image-20210305164911568.png)
+![image-20210305171752354](README.assets/image-20210305171752354.png)
+
+
 
 # 第二章 Nginx 安装
 
@@ -72,7 +72,7 @@ Nginx 可以作为静态页面的 web 服务器，同时还支持 CGI 协议的�
 
 需要前置依赖:
 
-![image-20210305164920588](C:\Users\86189\AppData\Roaming\Typora\typora-user-images\image-20210305164920588.png)
+![image-20210305171758459](README.assets/image-20210305171758459.png)
 
 ## 2.2 安装nginx
 
@@ -80,19 +80,29 @@ Nginx 可以作为静态页面的 web 服务器，同时还支持 CGI 协议的�
 
 **第一步，安装 pcre**
 
+```
 wget http://downloads.sourceforge.net/project/pcre/pcre/8.37/pcre-8.37.tar.gz 
+```
 
 解压文件，进入解压之后的目录，执行
 
+```
 ./configure
+```
+
+
 
 命令完成后，回到 pcre 目录下执行 make命令（把该文件编译并安装）
 
+```
 make && make install
+```
 
 最后通过检查版本号判断是否安装成功。
 
+```
 pcre-config \--version
+```
 
 **第二步，安装 openssl**
 
@@ -100,9 +110,11 @@ pcre-config \--version
 
 方式二：使用yum命令整体安装依赖(同时完成编译和安装)
 
+```
 yum -y install make zlib zlib-devel gcc-c++ libtool openssl openssl-devel
+```
 
-![image-20210305164930138](C:\Users\86189\AppData\Roaming\Typora\typora-user-images\image-20210305164930138.png)
+![image-20210305171805634](README.assets/image-20210305171805634.png)
 
 **第四步，安装 nginx**
 
@@ -116,19 +128,27 @@ yum -y install make zlib zlib-devel gcc-c++ libtool openssl openssl-devel
 
 下载：
 
+```
 wget http://nginx.org/download/nginx-1.10.3.tar.gz
+```
 
 解压：
 
+```
 tar -zxvf nginx-1.10.3.tar.gz cd nginx-1.10.3
+```
 
 配置：
 
+```
 ./configure
+```
 
 编译并安装：
 
+```
 make && make install
+```
 
 ./configure是源代码安装的第一步,主要的作用是对即将安装的软件进行配置,检查当前的环境是否满足要安装软件的依赖关系,但并不是所有的tar包都是源代码的包,
 
@@ -138,29 +158,45 @@ make && make install
 
 **开启防火墙**
 
+```
 systemctl start firewalld
+```
 
 **停止防火墙**
 
+```
 systemctl stop firewalld
+```
 
 **查看防火墙状态**
 
+```
 systemctl status firewalld
+```
 
 **查看开放的端口号**
 
+```
 firewall-cmd \--list-all
+```
 
 **设置开放的端口号**
 
+```
 firewall-cmd \--add-service=http \--permanent
+```
 
+```
 sudo firewall-cmd \--add-port=80/tcp \--permanent
+```
 
 **重启防火墙**
 
+```
 firewall-cmd \--reload
+```
+
+
 
 # 第 3 章 nginx 常用的命令和配置文件
 
@@ -172,23 +208,31 @@ firewall-cmd \--reload
 
 在/usr/local/nginx/sbin 目录下执行
 
+```
 ./nginx
+```
 
 2.  关闭命令
 
 在/usr/local/nginx/sbin 目录下执行
 
+```
 ./nginx -s stop
+```
 
 3.  重新加载命令（在nginx开启情况下 重新加载文件）
 
 在/usr/local/nginx/sbin 目录下执行
 
+```
 ./nginx -s reload
+```
 
 4.  查看版本号
 
+```
 ./nginx -v
+```
 
 ## 3.2 nginx.conf 配置文件
 
@@ -196,237 +240,127 @@ nginx 安装目录下，其默认的配置文件都放在这个目录的 conf �
 
 配置文件中有很多\#， 开头的表示注释内容，我们去掉所有以 \# 开头的段落，精简之后的内容如下：
 
-![image-20210305164940827](C:\Users\86189\AppData\Roaming\Typora\typora-user-images\image-20210305164940827.png)
+![image-20210305171814314](README.assets/image-20210305171814314.png)
 
-![image-20210305164945062](C:\Users\86189\AppData\Roaming\Typora\typora-user-images\image-20210305164945062.png)
+![image-20210305171818270](README.assets/image-20210305171818270.png)
 
-![image-20210305164948632](C:\Users\86189\AppData\Roaming\Typora\typora-user-images\image-20210305164948632.png)
+![image-20210305171822933](README.assets/image-20210305171822933.png)
+
+
 
 ```
 
-```
-
-\#user  nobody;
-
+#user  nobody;
 worker_processes  1;
 
- 
+#error_log  logs/error.log;
+#error_log  logs/error.log  notice;
+#error_log  logs/error.log  info;
 
-\#error_log  logs/error.log;
+#pid        logs/nginx.pid;
 
-\#error_log  logs/error.log  notice;
-
-\#error_log  logs/error.log  info;
-
- 
-
-\#pid     logs/nginx.pid;
-
- 
-
- 
 
 events {
-
-  worker_connections  1024;
-
+    worker_connections  1024;
 }
-
 http {
-
-  include    mime.types;
-
-  default_type  application/octet-stream;
-
- 
-
-  \#log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
-
-  \#          '$status $body_bytes_sent "$http_referer" '
-
-  \#          '"$http_user_agent" "$http_x_forwarded_for"';
-
- 
-
-  \#access_log  logs/access.log  main;
-
- 
-
-  sendfile     on;
-
-  \#tcp_nopush   on;
-
-  \#keepalive_timeout  0;
-
-  keepalive_timeout  65;
-
-  \#gzip  on;
-
-  server {
-
-​    listen    80;
-
-​    server_name  localhost;
-
- 
-
-​    \#charset koi8-r;
-
- 
-
-​    \#access_log  logs/host.access.log  main;
-
- 
-
-​    location / {
-
-​      root  html;
-
-​      index  index.html index.htm;
-
-​    }
-
- 
-
-​    \#error_page  404        /404.html;
-
- 
-
-​    \# redirect server error pages to the static page /50x.html
-
-​    \#
-
-​    error_page  500 502 503 504  /50x.html;
-
-​    location = /50x.html {
-
-​      root  html;
-
-​    }
-
- 
-
-​    \# proxy the PHP scripts to Apache listening on 127.0.0.1:80
-
-​    \#
-
-​    \#location ~ \.php$ {
-
-​    \#   proxy_pass  http://127.0.0.1;
-
-​    \#}
-
- 
-
-​    \# pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
-
-​    \#
-
-​    \#location ~ \.php$ {
-
-​    \#   root      html;
-
-​    \#   fastcgi_pass  127.0.0.1:9000;
-
-​    \#   fastcgi_index  index.php;
-
-​    \#   fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;
-
-​    \#   include     fastcgi_params;
-
-​    \#}
-
- 
-
-​    \# deny access to .htaccess files, if Apache's document root
-
-​    \# concurs with nginx's one
-
-​    \#
-
-​    \#location ~ /\.ht {
-
-​    \#   deny  all;
-
-​    \#}
-
-  }
-
- 
-
- 
-
-  \# another virtual host using mix of IP-, name-, and port-based configuration
-
-  \#
-
-  \#server {
-
-  \#   listen    8000;
-
-  \#   listen    somename:8080;
-
-  \#   server_name  somename  alias  another.alias;
-
- 
-
-  \#   location / {
-
-  \#     root  html;
-
-  \#     index  index.html index.htm;
-
-  \#   }
-
-  \#}
-
- 
-
- 
-
-  \# HTTPS server
-
-  \#
-
-  \#server {
-
-  \#   listen    443 ssl;
-
-  \#   server_name  localhost;
-
- 
-
-  \#   ssl_certificate    cert.pem;
-
-  \#   ssl_certificate_key  cert.key;
-
- 
-
-  \#   ssl_session_cache   shared:SSL:1m;
-
-  \#   ssl_session_timeout  5m;
-
- 
-
-  \#   ssl_ciphers  HIGH:!aNULL:!MD5;
-
-  \#   ssl_prefer_server_ciphers  on;
-
- 
-
-  \#   location / {
-
-  \#     root  html;
-
-  \#     index  index.html index.htm;
-
-  \#   }
-
-  \#}
-
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    #log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+    #                  '$status $body_bytes_sent "$http_referer" '
+    #                  '"$http_user_agent" "$http_x_forwarded_for"';
+
+    #access_log  logs/access.log  main;
+
+    sendfile        on;
+    #tcp_nopush     on;
+    #keepalive_timeout  0;
+    keepalive_timeout  65;
+    #gzip  on;
+    server {
+        listen       80;
+        server_name  localhost;
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+
+        location / {
+            root   html;
+            index  index.html index.htm;
+        }
+
+        #error_page  404              /404.html;
+
+        # redirect server error pages to the static page /50x.html
+        #
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+
+        # proxy the PHP scripts to Apache listening on 127.0.0.1:80
+        #
+        #location ~ \.php$ {
+        #    proxy_pass   http://127.0.0.1;
+        #}
+
+        # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+        #
+        #location ~ \.php$ {
+        #    root           html;
+        #    fastcgi_pass   127.0.0.1:9000;
+        #    fastcgi_index  index.php;
+        #    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;
+        #    include        fastcgi_params;
+        #}
+
+        # deny access to .htaccess files, if Apache's document root
+        # concurs with nginx's one
+        #
+        #location ~ /\.ht {
+        #    deny  all;
+        #}
+    }
+
+
+    # another virtual host using mix of IP-, name-, and port-based configuration
+    #
+    #server {
+    #    listen       8000;
+    #    listen       somename:8080;
+    #    server_name  somename  alias  another.alias;
+
+    #    location / {
+    #        root   html;
+    #        index  index.html index.htm;
+    #    }
+    #}
+
+
+    # HTTPS server
+    #
+    #server {
+    #    listen       443 ssl;
+    #    server_name  localhost;
+
+    #    ssl_certificate      cert.pem;
+    #    ssl_certificate_key  cert.key;
+
+    #    ssl_session_cache    shared:SSL:1m;
+    #    ssl_session_timeout  5m;
+
+    #    ssl_ciphers  HIGH:!aNULL:!MD5;
+    #    ssl_prefer_server_ciphers  on;
+
+    #    location / {
+    #        root   html;
+    #        index  index.html index.htm;
+    #    }
+    #}
 }
 
-```
 
 ```
 
@@ -438,7 +372,7 @@ http {
 
 比如上面第一行配置的：
 
-![image-20210305165115716](C:\Users\86189\AppData\Roaming\Typora\typora-user-images\image-20210305165115716.png)
+![image-20210305171833353](README.assets/image-20210305171833353.png)
 
 这是 Nginx 服务器并发处理服务的关键配置，worker_processes 值越大，可以支持的并发处理量也越多，但是会受到硬件、软件等设备的制约。
 
@@ -446,7 +380,9 @@ http {
 
 比如上面的配置：
 
-![image-20210305165123184](C:\Users\86189\AppData\Roaming\Typora\typora-user-images\image-20210305165123184.png)
+
+
+![image-20210305171856615](README.assets/image-20210305171856615.png)
 
 events 块涉及的指令主要影响 Nginx 服务器与用户的网络连接，常用的设置包括是否开启对多 work process 下的网络连接进行序列化，是否允许同时接收多个网络连接，选取哪种事件驱动模型来处理连接请求，每个 word process 可以同时支持的最大连接数等。
 
@@ -454,7 +390,7 @@ events 块涉及的指令主要影响 Nginx 服务器与用户的网络连接，
 
 **第三部分：http 块**
 
-![image-20210305165134618](C:\Users\86189\AppData\Roaming\Typora\typora-user-images\image-20210305165134618.png)
+![image-20210305171904007](README.assets/image-20210305171904007.png)
 
 这算是 Nginx 服务器配置中最频繁的部分，代理、缓存和日志定义等绝大多数功能和第三方模块的配置都在这里。
 
@@ -488,12 +424,17 @@ http 全局块配置的指令包括文件引入、MIME-TYPE 定义、日志自�
 
 ### java jdk安装
 
-![](media/document_image_rId29.png){width="6.3in" height="2.697846675415573in"}
+![image-20210305171916335](README.assets/image-20210305171916335.png)
 
-![](media/document_image_rId30.png){width="3.7916666666666665in" height="1.2708333333333333in"}
+![image-20210305171920978](README.assets/image-20210305171920978.png)
 
-![](media/document_image_rId31.png){width="5.5625in" height="2.0833333333333335in"}
 
+
+
+
+![image-20210305171926033](README.assets/image-20210305171926033.png)
+
+```
 export JAVA_HOME=/usr/local/java/jdk1.8.0_281
 
 export PATH=\$PATH:\$JAVA_HOME/bin
@@ -501,26 +442,29 @@ export PATH=\$PATH:\$JAVA_HOME/bin
 export CLASSPATH=.:\$JAVA_HOME/lib/dt.jar:\$JAVA_HOME/lib/tools.jar
 
 export JRE_HOME=\$JAVA_HOME/jre
+```
 
 注意：其中 JAVA_HOME， JRE_HOME 请根据自己的实际安装路径及 JDK 版本配置。
 
 修改/etc/profile之后让其生效
 
+```
 . /etc/profile 
+```
 
 （注意 . 之后应有一个空格）
 
-![](media/document_image_rId32.png){width="6.3in" height="1.0385444006999125in"}
+![image-20210305171244476](README.assets/image-20210305171244476.png)
 
-![](media/document_image_rId33.png){width="4.958333333333333in" height="1.125in"}
+![image-20210305171254507](README.assets/image-20210305171254507.png)
 
 ### tomcat安装
 
-![](media/document_image_rId34.png){width="6.3in" height="3.0376377952755904in"}
+![image-20210305171317885](README.assets/image-20210305171317885.png)
 
-![](media/document_image_rId35.png){width="6.3in" height="2.223102580927384in"}
+![image-20210305171323965](README.assets/image-20210305171323965.png)
 
-![](media/document_image_rId36.png){width="5.614583333333333in" height="2.3020833333333335in"}
+![image-20210305171330575](README.assets/image-20210305171330575.png)
 
 参考链接：https://www.cnblogs.com/li150dan/p/12535067.html
 
@@ -528,7 +472,7 @@ export JRE_HOME=\$JAVA_HOME/jre
 
 实现效果：使用 nginx 反向代理，访问 www.123.com 直接跳转到 127.0.0.1:8080
 
-![](media/document_image_rId37.png){width="5.354166666666667in" height="1.8020833333333333in"}
+![image-20210305171342505](README.assets/image-20210305171342505.png)
 
 ### linux服务器同时运行两个或多个tomcat
 
@@ -538,21 +482,25 @@ export JRE_HOME=\$JAVA_HOME/jre
 
 1.  启动一个 tomcat，使用curl指令请求,出现代码返回成功
 
+```
 curl 127.0.0.1:8080
+```
 
-![](media/document_image_rId39.png){width="6.3in" height="3.7682239720034993in"}
+![image-20210305171353061](README.assets/image-20210305171353061.png)
 
 2.  通过修改本地 host 文件，将 www.123.com 映射到 121.37.164.246（远程服务器ip）
 
+```
 121.37.164.246 www.123.com
+```
 
-![](media/document_image_rId40.png){width="6.3in" height="1.830990813648294in"}
+![image-20210305171359746](README.assets/image-20210305171359746.png)
 
 配置完成之后，我们便可以通过 www.123.com:8080 访问到第一步出现的 Tomcat 初始界面。那么如何只需要输入 www.123.com 便可以跳转到 Tomcat 初始界面呢？便用到 nginx 的反向代理。
 
 3.  在 nginx.conf 配置文件中增加如下配置
 
-![](media/document_image_rId41.png){width="3.6875in" height="2.7083333333333335in"}
+![image-20210305171406623](README.assets/image-20210305171406623.png)
 
 ## 4.3 反向代理实例二
 
@@ -570,33 +518,28 @@ curl 127.0.0.1:8080
 
 在 http 块中添加 server{}
 
-server {
+```
+  server {
+        listen       9001;
+        # 远程ip地址
+        server_name  121.37.164.246;
+  location ~ /edu/ {
+     proxy_pass http://127.0.0.1:8080;
+        }
+  location ~ /vod/ {
+      proxy_pass http://127.0.0.1:8081;
+             }
+    }              
 
-listen 9001;
-
-\# 远程ip地址
-
-server_name 121.37.164.246;
-
-location \~ /edu/ {
-
-proxy_pass http://127.0.0.1:8080;
-
-}
-
-location \~ /vod/ {
-
-proxy_pass http://127.0.0.1:8081;
-
-}
-
-}
+```
 
 **第三步，**重新启动nginx
 
 在/usr/local/nginx/sbin 目录下执行
 
+```
 ./nginx -s reload
+```
 
 **第四步，**测试
 
@@ -604,11 +547,11 @@ proxy_pass http://127.0.0.1:8081;
 
 （1）访问vod，效果为
 
-![](media/document_image_rId42.png){width="4.833333333333333in" height="1.0520833333333333in"}
+![image-20210305171418151](README.assets/image-20210305171418151.png)
 
 （2）访问：edu，效果为
 
-![](media/document_image_rId43.png){width="5.729166666666667in" height="1.3541666666666667in"}
+![image-20210305171422538](README.assets/image-20210305171422538.png)
 
 **location 指令说明**
 
@@ -616,7 +559,7 @@ proxy_pass http://127.0.0.1:8081;
 
 语法如下：
 
-![](media/document_image_rId44.png){width="2.7708333333333335in" height="0.7604166666666666in"}
+![image-20210305171428769](README.assets/image-20210305171428769.png)
 
 1、= ：用于不含正则表达式的 uri 前，要求请求字符串与 uri 严格匹配，如果匹配成功，就停止继续向下搜索并立即处理该请求。
 
@@ -638,7 +581,7 @@ proxy_pass http://127.0.0.1:8081;
 
 2） 在 nginx.conf 中进行配置
 
-![](media/document_image_rId45.png){width="5.020833333333333in" height="4.21875in"}
+![image-20210305171435956](README.assets/image-20210305171435956.png)
 
 ## 5.2 Nginx 四种分配策略
 
@@ -654,43 +597,42 @@ weight 代表权,重默认为 1,权重越高被分配的客户端越多。
 
 指定轮询几率，weight 和访问比率成正比，用于**后端服务器性能不均**的情况。例如：
 
+```
 upstream server_pool{
-
 server 121.37.164.246 weight=10;
-
 server 121.37.164.246 weight=10;
-
 }
+
+```
 
 **3、ip_hash**
 
 每个请求按访问 ip 的 hash 结果分配，这样**每个访客固定访问一个后端服务器**，可以解决 session 的问题。例如：
 
+```
 upstream server_pool{
-
-\#增加ip_hash
-
+#增加ip_hash
 ip_hash;
-
 server 121.37.164.246 weight=10;
-
 server 121.37.164.246 weight=10;
-
 }
+
+```
 
 **4、fair（第三方）**
 
 按后端服务器的**响应时间**来分配请求，响应时间短的优先分配。
 
+```
 upstream server_pool{
-
 server 121.37.164.246 weight=5;
-
 server 121.37.164.246 weight=10;
-
 fair;
-
 }
+
+```
+
+
 
 # 第 6 章 nginx 配置实例-动静分离
 
@@ -700,7 +642,7 @@ fair;
 
 一种是纯粹把静态文件独立成单独的域名，放在独立的服务器上，也是目前主流推崇的方案；
 
-![](media/document_image_rId46.png){width="5.708333333333333in" height="3.4895833333333335in"}
+![image-20210305171448453](README.assets/image-20210305171448453.png)
 
 另外一种方法就是动态跟静态文件混合在一起发布，通过 nginx 来分开。
 
@@ -712,29 +654,29 @@ fair;
 
 在 liunx 系统中准备静态资源，用于进行访问
 
-![](media/document_image_rId47.png){width="3.2083333333333335in" height="1.1354166666666667in"}
+![image-20210305171455747](README.assets/image-20210305171455747.png)
 
 2.进行 nginx 配置
 
 找到 nginx 安装目录，打开/conf/nginx.conf 配置文件，并重新加载nginx
 
-![](media/document_image_rId48.png){width="4.135416666666667in" height="3.71875in"}
+![image-20210305171504141](README.assets/image-20210305171504141.png)
 
 配置文件 autoindex on作用：
 
 可以列出当前文件目录。
 
-![](media/document_image_rId49.png){width="3.46875in" height="2.0in"}
+![image-20210305171510454](README.assets/image-20210305171510454.png)
 
 3、测试
 
 （1）浏览器中输入地址
 
-![](media/document_image_rId50.png){width="4.916666666666667in" height="2.3854166666666665in"}
+![image-20210305171516297](README.assets/image-20210305171516297.png)
 
 （2）在浏览器地址栏输入地址
 
-![](media/document_image_rId51.png){width="5.177083333333333in" height="1.8125in"}
+![image-20210305171521963](README.assets/image-20210305171521963.png)
 
 重点是添加 location：
 
@@ -746,7 +688,7 @@ fair;
 
 上述采用nginx方式：
 
-![](media/document_image_rId52.png){width="4.833333333333333in" height="1.6354166666666667in"}
+![image-20210305171529279](README.assets/image-20210305171529279.png)
 
 会有问题：
 
@@ -758,7 +700,7 @@ fair;
 
 1、什么是nginx高可用
 
-![](media/document_image_rId53.png){width="5.739583333333333in" height="2.2604166666666665in"}
+![image-20210305171535146](README.assets/image-20210305171535146.png)
 
 （1）需要两台 nginx 服务器
 
@@ -770,9 +712,6 @@ fair;
 
 1.  需要两台服务器 192.168.17.129 和 192.168.17.131
 
-```{=html}
-<!-- -->
-```
 2.  在两台服务器安装 nginx
 
 3.  在两台服务器安装 keepalived
@@ -781,7 +720,9 @@ fair;
 
 （1）使用 yum 命令进行安装
 
+```
 yum install keepalived --y
+```
 
 （2）安装之后，在 etc 里面生成目录 keepalived，有文件 keepalived.conf
 
@@ -789,85 +730,56 @@ yum install keepalived --y
 
 （1）修改/etc/keepalived/keepalivec.conf 配置文件
 
+```
 global_defs {
-
-notification_email {\#指定keepalived在发生切换时需要发送email到的对象，一行一个
-
-acassen\@firewall.loc
-
-failover\@firewall.loc
-
-sysadmin\@firewall.loc
-
+notification_email {#指定keepalived在发生切换时需要发送email到的对象，一行一个
+    acassen@firewall.loc
+    failover@firewall.loc
+    sysadmin@firewall.loc
 }
 
-notification_email_from Alexandre.Cassen\@firewall.loc \#指定发件人
-
-smtp_server 192.168.17.129 \#指定smtp服务器地址
-
-smtp_connect_timeout 30\#指定smtp连接超时时间
-
-router_id LVS_DEVEL \#运行keepalived机器的一个标识 （ifconfig查看）
-
+notification_email_from Alexandre.Cassen@firewall.loc #指定发件人
+smtp_server 192.168.17.129 #指定smtp服务器地址
+smtp_connect_timeout 30#指定smtp连接超时时间
+router_id LVS_DEVEL #运行keepalived机器的一个标识 （ifconfig查看）
 }
-
-vrrp_script chk_http_port { \#检测脚本
-
-script \"/usr/local/src/nginx_check.sh\"
-
-interval 2 \#（检测脚本执行的间隔）
-
-weight 2 \#权重
-
-}
-
-vrrp_instance VI_1 {
-
-state BACKUP \# 备份服务器上将 MASTER 改为 BACKUP
-
-interface ens33 //服务器网卡
-
-virtual_router_id 51   \# 主、备机的 virtual_router_id 必须相同
-
-priority 90 \# 主、备机取不同的优先级，主机值较大，备份机值较小
-
-advert_int 1
-
+vrrp_script chk_http_port { #检测脚本
+script "/usr/local/src/nginx_check.sh"
+interval 2	#（检测脚本执行的间隔）	
+weight 2 	#权重	
+	}		
+vrrp_instance VI_1 {		
+	state BACKUP	# 备份服务器上将 MASTER 改为 BACKUP	
+	interface ens33	//服务器网卡	
+	virtual_router_id 51   # 主、备机的 virtual_router_id 必须相同	
+	priority 90	# 主、备机取不同的优先级，主机值较大，备份机值较小	
+	advert_int 1		
 authentication {
-
-auth_type PASS
-
-auth_pass 1111
-
+    auth_type PASS
+    auth_pass 1111
 }
-
-virtual_ipaddress { \# 虚拟ip
-
+virtual_ipaddress {  # 虚拟ip
 192.168.17.50 // VRRP H 虚拟地址
-
+    }
 }
 
-}
+
+```
 
 （2）在/usr/local/src 添加检测脚本nginx_check.sh
 
-\#!/bin/bash
-
-A=\`ps -C nginx --no-header \|wc -l\`
-
-if \[ \$A -eq 0 \];then
-
-/usr/local/nginx/sbin/nginx
-
-sleep 2
-
-if \[ \`ps -C nginx \--no-header \|wc -l\` -eq 0 \];then
-
-killall keepalived
-
+```
+#!/bin/bash
+A=`ps -C nginx –no-header |wc -l`
+if [ $A -eq 0 ];then
+    /usr/local/nginx/sbin/nginx
+    sleep 2
+    if [ `ps -C nginx --no-header |wc -l` -eq 0 ];then
+        killall keepalived
+    fi
 fi
 
-fi
+```
 
 （3）把两台服务器上 nginx 和 keepalived 启动
 
@@ -883,11 +795,11 @@ systemctl start keepalived.service
 
 （1）在浏览器地址栏输入虚拟 ip 地址 192.168.17.50
 
-![](media/document_image_rId54.png){width="5.5in" height="2.5625in"}
+![image-20210305171555574](README.assets/image-20210305171555574.png)
 
 （2）把主服务器（192.168.17.129）nginx 和 keepalived 停止，再输入 192.168.17.50
 
-![](media/document_image_rId55.png){width="5.604166666666667in" height="2.5416666666666665in"}
+![image-20210305171601837](README.assets/image-20210305171601837.png)
 
 总结：通过 keepalived软件对外暴露虚拟ip，对内做代理绑定nginx服务器，nginx服务器做转发。
 
@@ -895,15 +807,15 @@ systemctl start keepalived.service
 
 ## 1、master与worker
 
-![](media/document_image_rId56.png){width="5.875in" height="0.875in"}
+![image-20210305171608090](README.assets/image-20210305171608090.png)
 
 一个master（老板）多个worker(工人)，worker做事。
 
-![](media/document_image_rId57.png){width="5.572916666666667in" height="3.4479166666666665in"}
+![image-20210305171614451](README.assets/image-20210305171614451.png)
 
 ## 2、worker工作模式
 
-![](media/document_image_rId58.png){width="5.65625in" height="2.90625in"}
+![image-20210305171620002](README.assets/image-20210305171620002.png)
 
 ## 3、一个 master 和多个 woker 有好处
 
@@ -937,8 +849,8 @@ worker_processes 表示 worker数量
 
 静态：（worker直接返回静态资源）
 
-![](media/document_image_rId61.png){width="4.322916666666667in" height="1.3645833333333333in"}
+![image-20210305171630991](README.assets/image-20210305171630991.png)
 
 动态：（worker需要请求tomcat服务器）
 
-![](media/document_image_rId62.png){width="6.3in" height="2.576077209098863in"}
+![image-20210305171636528](README.assets/image-20210305171636528.png)
