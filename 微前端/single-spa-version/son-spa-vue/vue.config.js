@@ -3,7 +3,7 @@
 module.exports = {
     configureWebpack: {
         output: {
-            library: 'singleVue',//导报
+            library: 'singleVue',//导
             libraryTarget: 'umd'//umd模块作用，window.singleVue.bootstrap/mount/unmount，将这些挂在window上
         },
         devServer: {//区别是子应用

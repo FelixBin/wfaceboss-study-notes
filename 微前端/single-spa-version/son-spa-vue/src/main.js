@@ -21,6 +21,6 @@ const vueLifeCycle = singlespaVue({
 
 
 //协议接入，子应用定义好协议，父应用调用这些方法
-export const bootstrap = vueLifeCycle.bootstrap()
+export const bootstrap = vueLifeCycle.bootstrap
 export const mount = vueLifeCycle.mount
 export const unmount = vueLifeCycle.unmount
