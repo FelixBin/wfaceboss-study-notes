@@ -1,14 +1,14 @@
 <template>
-  <div class="hello">
+  <div>
     <div>
-      hello world
+      Home页面
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Home',
   props: {
     msg: String
   }

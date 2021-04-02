@@ -25,6 +25,39 @@ npm install single-spa
 
 2.子应用操作
 
+App.vue文件
+```app.vue文件
+
+<template>
+  <div id="app">
+    <router-view/>
+  </div>
+</template>
+
+<script>
+
+export default {
+  name: 'App',
+  components: {
+    
+  }
+}
+</script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
+
+```
+
+
 main.js
 
 ```
@@ -89,29 +122,33 @@ npm install vue-router  --save-dev
 ```
 
 - src 目录下 新建 router 目录，目录下新建 index.js
+  
+```
+import Vue from 'vue'
+import Router from 'vue-router'
+import Home from '@/components/Home'
 
-  ```
-  import Vue from 'vue'
-  import Router from 'vue-router'
-  import Home from '@/components/Home'
-  
-  Vue.use(Router)
-  
-  const router = new Router({
-    routes: [
-      {
-        path: '/',
-        name: 'Home',
-        component: Home,
-        meta: {  requiresAuth: true
+Vue.use(Router)
+
+
+const routes =
+[
+{
+path: '/',
+name: 'Home',
+component: Home
+
         }
-      }
     ]
-  })
-  
-  
-  export default router
-  
+
+const router = new Router({
+mode: 'history',
+base: '/vue',
+routes
+})
+
+
+export default router 
   ```
 
   
@@ -123,23 +160,22 @@ import router from './router'
 ```
 
 
-
 - 组件创建
 
   在components目录下新建组件
 
   ```
   <template>
-    <div class="hello">
+    <div>
      <div>
-       hello world
+       Home页面
      </div>
     </div>
   </template>
   
   <script>
   export default {
-    name: 'HelloWorld',
+    name: 'Home',
     props: {
       msg: String
     }
@@ -156,14 +192,12 @@ import router from './router'
 - 在router下的index.js文件中导入组件
 
 ```
-import HelloWorld from '@/components/HelloWorld'
+import Home from '@/components/Home'
 ```
 
 - 使用
+  启动子应用
+  启动父应用
 
-#二、 qiankun
-
-
-#三、icestark
 
 
