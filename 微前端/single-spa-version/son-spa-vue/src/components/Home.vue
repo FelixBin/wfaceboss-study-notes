@@ -1,7 +1,12 @@
 <template>
   <div>
     <div>
-      Home页面
+     <div>
+       我是Home页面
+     </div>
+      <div>
+        <router-link to="/about">我是about页面</router-link>
+      </div>
     </div>
   </div>
 </template>
