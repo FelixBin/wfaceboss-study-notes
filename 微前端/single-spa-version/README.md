@@ -40,7 +40,6 @@ Single-spa诞生于2018年，是一个用于前端微服务化的JavaScript前�
 # single-spa
 ## 1 创建两个项目并安装single-spa：
 
-
 - son-spa-vue 
 
 ```
@@ -60,8 +59,6 @@ vue create father-spa-vue
 ```
 npm install single-spa
 ```
-
-
 
 2.子应用操作
 
