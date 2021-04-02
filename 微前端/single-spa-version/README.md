@@ -1,5 +1,45 @@
-# 一、single-spa
-##1 创建两个项目并安装single-spa：
+#一、为什么需要微前端?
+##1.What?什么是微前端?
+![img.png](img.png)
+微前端就是将不同的功能按照不同的维度拆分成多个子应用。通过主应用来加载这些子应用
+
+微前端的核心在于**拆**, 拆完后再**合**!
+
+##2、why?为什么去使用他?
+- 不同团队间开发同一个应用技术栈不同怎么破？
+- 希望每个团队都可以独立开发，独立部署怎么破？
+- 项目中还需要老的应用代码怎么破？
+
+们是不是可以将一个应用划分成若干个子应用，再将子应用打包成一个个的lib呢？当路径切换时加载不同的子应用，这样每个子应用都是独立的，技术栈也就不用再做限制了！从而解决了前端协同开发的问题。
+
+##3、How?怎样落地微前端?
+![img_1.png](img_1.png)
+
+Single-spa诞生于2018年，是一个用于前端微服务化的JavaScript前端解决方案  (本身没有处理样式隔离、js执行隔离)  实现了路由劫持和应用加载；
+019年 qiankun基于Single-spa, 提供了更加开箱即用的 API  （single-spa + sandbox + import-html-entry），它 做到了技术栈无关，并且接入简单
+
+>子应用可以独立构建，运行时动态加载，主子应用完全解耦，并且技术栈无关，靠的是协议接入（这里提前强调一下：子应用必须导出 bootstrap、mount、unmount三个方法）
+
+###应用间如何通信？
+
+- 基于URL来进行数据传递，但是这种传递消息的方式能力较弱；
+
+- 基于CustomEvent实现通信；
+
+- 基于props主子应用间通信；
+
+- 使用全局变量、Redux进行通信。
+
+###如何处理公共依赖？
+
+- CDN - externals
+- webpack联邦模块
+
+#四、实战
+
+# single-spa
+## 1 创建两个项目并安装single-spa：
+
 
 - son-spa-vue 
 
@@ -68,19 +108,28 @@ import router from './router'
 
 Vue.config.productionTip = false
 
-
 const appOptions = {
     el: '#vue',//挂载到父应用中的id为vue的标签中
     router,
     render: h => h(App)
 }
 
-
-//vueLifeCycle(包装后的生命周期)对应这三个方法botstrap mount unmount
+//(子应用模式)vueLifeCycle(包装后的生命周期)对应这三个方法botstrap mount unmount
 const vueLifeCycle = singlespaVue({
     Vue,
     appOptions
 })
+
+// （非子应用模式）在非子应用中正常挂载应用
+if(!window.singleSpaNavigate){
+    delete appOptions.el;
+    new Vue(appOptions).$mount('#app');
+}
+
+//如果是父应用引用我
+// if(window.singleSpaNavigate){
+//     __webpack_public_path__ = 'http://localhost:10000/'
+// }
 
 
 //协议接入，子应用定义好协议，父应用调用这些方法
@@ -88,6 +137,7 @@ export const bootstrap = vueLifeCycle.bootstrap
 export const mount = vueLifeCycle.mount
 export const unmount = vueLifeCycle.unmount
 export default vueLifeCycle;
+
 
 ```
 
@@ -198,6 +248,8 @@ import Home from '@/components/Home'
 - 使用
   启动子应用
   启动父应用
+  
+
 
 
 
