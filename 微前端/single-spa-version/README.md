@@ -1,4 +1,5 @@
-1 创建两个项目并安装single-spa：
+# 一、single-spa
+##1 创建两个项目并安装single-spa：
 
 - son-spa-vue 
 
@@ -17,7 +18,7 @@ vue create father-spa-vue
 ```
 
 ```
-npm install single-spa-vue
+npm install single-spa
 ```
 
 
@@ -50,9 +51,10 @@ const vueLifeCycle = singlespaVue({
 
 
 //协议接入，子应用定义好协议，父应用调用这些方法
-export const bootstrap = vueLifeCycle.bootstrap()
+export const bootstrap = vueLifeCycle.bootstrap
 export const mount = vueLifeCycle.mount
 export const unmount = vueLifeCycle.unmount
+export default vueLifeCycle;
 
 ```
 
@@ -103,11 +105,6 @@ npm install vue-router  --save-dev
         component: Home,
         meta: {  requiresAuth: true
         }
-      },
-      {
-  
-        path:'**',
-        redirect:'/'
       }
     ]
   })
@@ -156,8 +153,6 @@ import router from './router'
   
   ```
 
-  
-
 - 在router下的index.js文件中导入组件
 
 ```
@@ -165,4 +160,10 @@ import HelloWorld from '@/components/HelloWorld'
 ```
 
 - 使用
+
+#二、 qiankun
+
+
+#三、icestark
+
 
