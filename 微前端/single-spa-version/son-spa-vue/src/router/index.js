@@ -12,10 +12,6 @@ const router = new Router({
             name: 'HelloWorld',
             component: HelloWorld
 
-        },
-        {
-            path:'**',
-            redirect:'/'
         }
     ]
 })

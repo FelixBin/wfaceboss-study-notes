@@ -24,3 +24,4 @@ const vueLifeCycle = singlespaVue({
 export const bootstrap = vueLifeCycle.bootstrap
 export const mount = vueLifeCycle.mount
 export const unmount = vueLifeCycle.unmount
+export default vueLifeCycle;
