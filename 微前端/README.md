@@ -211,7 +211,8 @@ import router from './router'
 
   在components目录下新建组件
 
-  ```
+  
+```
   <template>
     <div>
      <div>
@@ -245,6 +246,55 @@ import Home from '@/components/Home'
 - 使用
   启动子应用
   启动父应用
+  
+
+#qiankun
+新建`qian-kun-version`目录，然后在该目录下分别创建`qiankun-base`、`qiankun-vue`、`qiankun-react`项目。
+
+打开控制台，cd 到`qian-kun-version`目录下，分别:
+
+- 创建`qiankun-base`
+
+```angular2html
+vue init webpack qiankun-base
+```
+
+- 创建`qiankun-vue`
+
+```angular2html
+vue init webpack qiankun-vue
+```
+
+- 创建`qiankun-react`
+
+```
+npm install -g create-react-app
+```
+
+
+```
+create-react-app qiankun-react
+```
+
+# 基座注册子应用
+
+安装element ui
+
+```
+npm i element-ui -S
+```
+
+安装qiankun
+```angular2html
+npm i qiankun -S
+
+```
+
+
+
+
+
+
   
 
 
