@@ -22,7 +22,7 @@ const apps = [
     props:{a:1}
   },
   {
-    name: 'reactApp',
+    name: 'qiankun-react',
     entry: 'http://localhost:20000',
     container: '#react',
     activeRule: '/react'
