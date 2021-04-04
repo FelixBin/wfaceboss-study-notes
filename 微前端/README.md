@@ -37,7 +37,7 @@ Single-spa诞生于2018年，是一个用于前端微服务化的JavaScript前�
 
 #四、实战
 
-# single-spa
+# single-spa实战
 ## 1 创建两个项目并安装single-spa：
 
 - son-spa-vue 
@@ -211,7 +211,6 @@ import router from './router'
 
   在components目录下新建组件
 
-  
 ```
   <template>
     <div>
@@ -248,21 +247,21 @@ import Home from '@/components/Home'
   启动父应用
   
 
-#qiankun
+#qiankun实战
 新建`qian-kun-version`目录，然后在该目录下分别创建`qiankun-base`、`qiankun-vue`、`qiankun-react`项目。
 
 打开控制台，cd 到`qian-kun-version`目录下，分别:
 
 - 创建`qiankun-base`
 
-```angular2html
-vue init webpack qiankun-base
+```
+vue create qiankun-base
 ```
 
 - 创建`qiankun-vue`
 
-```angular2html
-vue init webpack qiankun-vue
+```
+vue create qiankun-vue
 ```
 
 - 创建`qiankun-react`
@@ -276,19 +275,269 @@ npm install -g create-react-app
 create-react-app qiankun-react
 ```
 
-# 基座注册子应用
+##主应用编写
 
-安装element ui
+- 安装element ui
 
 ```
 npm i element-ui -S
 ```
 
-安装qiankun
+- 安装qiankun
 ```angular2html
 npm i qiankun -S
 
 ```
+
+- App.vue文件
+```
+<template>
+  <div >
+    <el-menu :router="true" mode="horizontal">
+      <!--基座可以放自己的路由-->
+      <el-menu-item index="/">首页</el-menu-item>
+      <!--引用其他子应用-->
+      <el-menu-item index="/vue">vue子应用</el-menu-item>
+      <el-menu-item index="/react">react子应用</el-menu-item>
+    </el-menu>
+    <router-view v-show="$route.name"></router-view>
+    <div v-show="!$route.name" id="vue"></div>
+    <div v-show="!$route.name" id="react"></div>
+  </div>
+</template>
+
+<script>
+
+  export default {
+    name: 'App',
+    components: {}
+  }
+</script>
+
+<style>
+
+</style>
+
+
+```
+- main.js文件(注册子应用)
+```
+import Vue from 'vue'
+import App from './App'
+import router from './router'
+
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
+Vue.use(ElementUI);
+
+import {registerMicroApps, start} from "qiankun"
+
+Vue.config.productionTip = false
+
+const apps = [
+  {
+    name: 'qiankun-vue',//应用名称
+    entry: 'http://localhost:10000',//默认会加载这个html 解析里面的js 动态执行（子应用必须支持跨域）
+    container: '#vue',//容器名
+    activeRule: '/vue',//激活的路径
+    props:{a:1}
+  },
+  {
+    name: 'qiankun-react',
+    entry: 'http://localhost:20000',
+    container: '#react',
+    activeRule: '/react'
+  }
+]
+registerMicroApps(apps);//注册应用
+start();//开启
+
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  render: h => h(App)
+}).$mount("#app")
+
+```
+
+## vue子应用
+
+- main.js文件
+```
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import './public-path';
+import Vue from 'vue'
+import App from './App'
+import router from './router'
+
+Vue.config.productionTip = false
+
+let instance = null;
+
+function render() {
+    instance = new Vue({
+        router,
+        render: h => h(App)
+    }).$mount('#app')//这里是挂载到自己的html中 基座会拿到这个挂载后的html 将其插入进去
+}
+
+
+//独立运行微应用
+if (!window.__POWERED_BY_QIANKUN__) {
+    render();
+}
+
+
+//子组件的协议
+export async function bootstrap() {
+}
+
+export async function mount(props) {//挂载时渲染
+    render(props);
+}
+
+export async function unmount() {//卸载应用
+    instance.$destroy();
+    instance = null;
+}
+
+```
+
+- 在 src 目录新增 public-path.js
+
+```
+if (window.__POWERED_BY_QIANKUN__) {
+    // eslint-disable-next-line no-undef
+    __webpack_public_path__ = window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__;
+}
+
+```
+
+- 打包配置修改（`vue.config.js`）
+
+该应用根目录新建`vue.config.js`
+
+```
+// 配置将子应用打包成一个个的lib去给父应用使用
+
+module.exports={
+    devServer:{
+        port:10000,
+        headers:{
+            'Access-Control-Allow-Origin':'*'//允许访问跨域
+        }
+    },
+    configureWebpack:{
+        output:{
+            library:'qiankun-vue',
+            libraryTarget:'umd'
+        }
+    }
+}
+
+```
+
+## react子应用
+
+- `index.js`文件
+
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+
+
+function render() {
+    ReactDOM.render(
+        <React.StrictMode>
+            <App/>
+        </React.StrictMode>,
+        document.getElementById('root')
+    );
+}
+
+if (!window.__POWERED_BY_QIANKUN__) {
+    render()
+}
+
+export async function bootstrap() {
+}
+
+export async function mount() {
+    render();
+}
+
+export async function unmount() {
+    ReactDOM.unmountComponentAtNode(document.getElementById("root"));
+}
+
+
+
+```
+
+- 在 `src` 目录新增 `public-path.js`：
+
+```
+if (window.__POWERED_BY_QIANKUN__) {
+  __webpack_public_path__ = window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__;
+}
+
+```
+
+- 修改 `webpack` 配置
+
+安装插件 `@rescripts/cli`，当然也可以选择其他的插件，例如 `react-app-rewired`
+
+```
+npm i -D @rescripts/cli
+```
+
+根目录新增 `.rescriptsrc.js`
+
+```
+const { name } = require('./package');
+
+module.exports = {
+  webpack: config => {
+    config.output.library = `${name}-[name]`;
+    config.output.libraryTarget = 'umd';
+    config.output.jsonpFunction = `webpackJsonp_${name}`;
+    config.output.globalObject = 'window';
+
+    return config;
+  },
+
+  devServer: _ => {
+    const config = _;
+
+    config.headers = {
+      'Access-Control-Allow-Origin': '*',
+    };
+    config.historyApiFallback = true;
+    config.hot = false;
+    config.watchContentBase = false;
+    config.liveReload = false;
+
+    return config;
+  },
+};
+
+```
+
+- 修改 `package.json`：
+
+```
+ "start": "rescripts start",
+"build": "rescripts build",
+"test": "rescripts test",
+```
+
+
 
 
 
