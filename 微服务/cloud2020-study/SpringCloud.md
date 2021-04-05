@@ -36,7 +36,7 @@
 
 ## 2,创建子模块,pay模块
 
-![](.\图片\sc的3.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sc的3.png)
 
 ### 1,子模块名字:
 
@@ -75,37 +75,37 @@ mybatis:
 
 #### 1,sql
 
-![](.\图片\sc的4.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sc的4.png)
 
 #### 	2,实体类
 
-![](.\图片\sc的5.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sc的5.png)
 
 #### 3,.entity类
 
-![](.\图片\sc的6.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sc的6.png)
 
 #### 4,dao层:
 
-![](.\图片\sc的7.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sc的7.png)
 
 #### 5,mapper配置文件类
 
 ​				**在resource下,创建mapper/PayMapper.xml**
 
-![](.\图片\sc的8.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sc的8.png)
 
 #### 6,写service和serviceImpl
 
-![](.\图片\sc的9.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sc的9.png)
 
-![sc的9](.\图片\sc的10.png)
+![sc的9](C:/Users/Administrator/Desktop/新建文件夹/图片/sc的10.png)
 
 #### 7,controller
 
-![](.\图片\sc的11.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sc的11.png)
 
-![](.\图片\sc的12.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sc的12.png)
 
 
 
@@ -115,9 +115,9 @@ mybatis:
 
 ## 3,热部署:
 
-![](.\图片\sc的13.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sc的13.png)
 
-![](.\图片\sc的14.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sc的14.png)
 
 .....
 
@@ -131,13 +131,13 @@ mybatis:
 
 ## 4,order模块
 
-![](.\图片\sc的3.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sc的3.png)
 
 ### **1,pom**		
 
 ### **2,yml配置文件**
 
-![](.\图片\order模块1.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/order模块1.png)
 
 ### **3,主启动类**
 
@@ -151,19 +151,19 @@ mybatis:
 
 使用RestTemplate调用pay模块,
 
-​	![](.\图片\order模块2.png)
+​	![](C:/Users/Administrator/Desktop/新建文件夹/图片/order模块2.png)
 
-![](.\图片\order模块3.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/order模块3.png)
 
 
 
 ​	将restTemplate注入到容器
 
-![](.\图片\order模块4.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/order模块4.png)
 
 编写controller:
 
-![](.\图片\order模块5.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/order模块5.png)
 
 
 
@@ -175,11 +175,11 @@ mybatis:
 
 ### 2,抽取公共pom
 
-![](.\图片\commons模块.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/commons模块.png)
 
 ### 3,entity和实体类放入commons中
 
-![](.\图片\commons模块2.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/commons模块2.png)
 
 ### 4,使用mavne,将commone模块打包(install),
 
@@ -203,17 +203,17 @@ mybatis:
 
 Eureka用于**==服务注册==**,目前官网**已经停止更新**
 
-​	![](.\图片\Eureka的1.png)
+​	![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的1.png)
 
 
 
-![](.\图片\Eureka的2.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的2.png)
 
-![](.\图片\Eureka的3.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的3.png)
 
 
 
- ![](.\图片\Eureka的4.png)
+ ![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的4.png)
 
 
 
@@ -225,15 +225,15 @@ Eureka用于**==服务注册==**,目前官网**已经停止更新**
 
 ​		eurka最新的依赖变了
 
-![](.\图片\Eureka的5.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的5.png)
 
 #### 3,配置文件:
 
-![](.\图片\Eureka的6.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的6.png)
 
 #### 4,主启动类	
 
-![](.\图片\Eureka的7.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的7.png)
 
 #### **5,此时就可以启动当前项目了**
 
@@ -243,15 +243,15 @@ Eureka用于**==服务注册==**,目前官网**已经停止更新**
 
 ##### 1.主启动类上,加注解,表示当前是eureka客户端
 
-![](.\图片\Eureka的10.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的10.png)
 
 ##### 2,修改pom,引入
 
-![](.\图片\Eureka的8.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的8.png)
 
 ##### 3,修改配置文件:
 
-![](.\图片\Eureka的9.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的9.png)
 
 ##### 4,pay模块重启,就可以注册到eureka中了
 
@@ -269,7 +269,7 @@ Eureka用于**==服务注册==**,目前官网**已经停止更新**
 
 #### 集群原理:
 
-![](.\图片\Eureka的11.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的11.png)
 
  ```java
 1,就是pay模块启动时,注册自己,并且自身信息也放入eureka
@@ -278,13 +278,13 @@ Eureka用于**==服务注册==**,目前官网**已经停止更新**
  	并且还会缓存一份到本地,每30秒更新一次
  ```
 
-![](.\图片\Eureka的12.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的12.png)
 
 **集群构建原理:**
 
 ​		互相注册
 
-![](.\图片\Eureka的13.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的13.png)
 
 
 
@@ -300,11 +300,11 @@ Eureka用于**==服务注册==**,目前官网**已经停止更新**
 
 ​		在写配置文件前,修改一下主机的hosts文件
 
-![](.\图片\Eureka的14.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的14.png)
 
 首先修改之前的7001的eureka项目,因为多个eureka需要互相注册
 
-![](.\图片\Eureka的15.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的15.png)
 
 然后修改7002
 
@@ -316,7 +316,7 @@ Eureka用于**==服务注册==**,目前官网**已经停止更新**
 
 ##### 4,然后启动7001,7002即可
 
-*![](.\图片\Eureka的16.png)*
+*![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的16.png)*
 
 
 
@@ -326,7 +326,7 @@ Eureka用于**==服务注册==**,目前官网**已经停止更新**
 
 ##### 1,只需要修改配置文件即可:
 
-![](.\图片\Eureka的17.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的17.png)
 
 ##### 2,两个模块都修改上面的都一样即可
 
@@ -362,11 +362,11 @@ Eureka用于**==服务注册==**,目前官网**已经停止更新**
 
 ​		虽然我们是使用RestTemplate访问的微服务,但是也可以负载均衡的
 
-​		![](.\图片\Eureka的18.png)
+​		![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的18.png)
 
 **注意这样还不可以,需要让RestTemplate开启负载均衡注解,还可以指定负载均衡算法,默认轮询**
 
-![](.\图片\Eureka的19.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的19.png)
 
 
 
@@ -380,7 +380,7 @@ Eureka用于**==服务注册==**,目前官网**已经停止更新**
 
 #### 1,修改配置文件:
 
-![](.\图片\Eureka的20.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的20.png)
 
 
 
@@ -388,21 +388,21 @@ Eureka用于**==服务注册==**,目前官网**已经停止更新**
 
 ### 5,eureka服务发现:
 
-![](.\图片\Eureka的21.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的21.png)
 
 以pay模块为例
 
 #### 1,首先添加一个注解,在controller中
 
-![](.\图片\Eureka的22.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的22.png)
 
-![](.\图片\Eureka的23.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的23.png)
 
 
 
 #### 2,在主启动类上添加一个注解
 
-![](.\图片\Eureka的24.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的24.png)
 
 **然后重启8001.访问/payment/discover**y
 
@@ -412,23 +412,23 @@ Eureka用于**==服务注册==**,目前官网**已经停止更新**
 
 ### 6,Eureka自我保护:
 
-![](.\图片\Eureka的26.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的26.png)
 
-![](.\图片\Eureka的27.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的27.png)
 
-![](.\图片\Eureka的25.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的25.png)
 
 
 
-![](.\图片\Eureka的28.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的28.png)
 
 
 
 **eureka服务端配置:**
 
-![](.\图片\Eureka的29.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的29.png)
 
-![](.\图片\Eureka的30.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的30.png)
 
 ​			**设置接受心跳时间间隔**
 
@@ -436,7 +436,7 @@ Eureka用于**==服务注册==**,目前官网**已经停止更新**
 
 **客户端(比如pay模块):**
 
-![](.\图片\Eureka的31.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Eureka的31.png)
 
 
 
@@ -468,15 +468,15 @@ Eureka用于**==服务注册==**,目前官网**已经停止更新**
 
 #### 2,配置文件
 
-![](.\图片\zookeeper的3.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/zookeeper的3.png)
 
 #### 3,主启动类
 
-![](.\图片\zookeeper的1.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/zookeeper的1.png)
 
 #### 4,controller
 
-![](.\图片\zookeeper的2.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/zookeeper的2.png)
 
 #### 5,然后就可以启动
 
@@ -485,7 +485,7 @@ Eureka用于**==服务注册==**,目前官网**已经停止更新**
 解决:
 		修改pom文件,改为与我们zk版本匹配的jar包
 
-![](.\图片\zookeeper的4.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/zookeeper的4.png)
 
 **此时8003就注册到zk中了**
 
@@ -516,19 +516,19 @@ Eureka用于**==服务注册==**,目前官网**已经停止更新**
 
 #### 3,配置文件
 
-![](.\图片\zookeeper的5.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/zookeeper的5.png)
 
 #### 4主启动类:
 
-![](.\图片\zookeeper的1.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/zookeeper的1.png)
 
 #### 5,RestTemolate
 
-![注意,这里使用RestTemolate,要先注册它](.\图片\zookeeper的6.png)
+![注意,这里使用RestTemolate,要先注册它](C:/Users/Administrator/Desktop/新建文件夹/图片/zookeeper的6.png)
 
 #### 6,controller
 
-![](.\图片\zookeeper的7.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/zookeeper的7.png)
 
 **然后启动即可注册到zk**
 
@@ -536,7 +536,7 @@ Eureka用于**==服务注册==**,目前官网**已经停止更新**
 
 只需要修改配置文件:
 
-![](.\图片\zookeeper的5.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/zookeeper的5.png)
 
 这个connect-string指定多个zk地址即可
 
@@ -564,11 +564,11 @@ connect-string: 1.2.3.4,2.3.4.5
 
 ## 8,Consul:
 
-![](.\图片\consul的1.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/consul的1.png)
 
 
 
-![](.\图片\consul的2.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/consul的2.png)
 
 
 
@@ -578,7 +578,7 @@ connect-string: 1.2.3.4,2.3.4.5
 
 需要下载一个安装包
 
-![](.\图片\consul的3.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/consul的3.png)
 
 启动是一个命令行界面,需要输入consul agen-dev启动
 
@@ -594,15 +594,15 @@ cloud_consule_pay_8006
 
 #### 3,配置文件
 
-![](.\图片\consul的4.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/consul的4.png)
 
 #### 4,主启动类
 
-![](.\图片\consul的5.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/consul的5.png)
 
 #### 5,controller
 
-![](.\图片\consul的6.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/consul的6.png)
 
 #### 6,启动服务
 
@@ -622,11 +622,11 @@ cloud-consul-order-80
 
 #### 2,配置文件
 
-![](.\图片\consul的7.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/consul的7.png)
 
 #### 3,主启动类
 
-![](.\图片\consul的5.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/consul的5.png)
 
 #### 4,RestTemplate注册
 
@@ -634,7 +634,7 @@ cloud-consul-order-80
 
 #### 5,controller
 
-![](.\图片\consul的8.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/consul的8.png)
 
 #### 6,启动服务,测试
 
@@ -646,11 +646,11 @@ cloud-consul-order-80
 
 ## 9,三个注册中心的异同:
 
-![](.\图片\consul的9.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/consul的9.png)
 
-![](.\图片\consul的10.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/consul的10.png)
 
-![](.\图片\consul的11.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/consul的11.png)
 
 
 
@@ -664,15 +664,15 @@ cloud-consul-order-80
 
 ## 10,Ribbon负载均衡:
 
-![](.\图片\Ribbon.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Ribbon.png)
 
 **Ribbon目前也进入维护,基本上不准备更新了**
 
-![](.\图片\Ribbon的2.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Ribbon的2.png)
 
 **进程内LB(本地负载均衡)**
 
-![](.\图片\Ribbon的5.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Ribbon的5.png)
 
 
 
@@ -680,7 +680,7 @@ cloud-consul-order-80
 
 **集中式LB(服务端负载均衡)**
 
-![](.\图片\Ribbon的4.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Ribbon的4.png)
 
 
 
@@ -690,21 +690,21 @@ cloud-consul-order-80
 
 **区别**
 
-![](.\图片\Ribbon的3.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Ribbon的3.png)
 
 
 
 **Ribbon就是负载均衡+RestTemplate**
 
-![](.\图片\Ribbon的6.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Ribbon的6.png)
 
 
 
-![](.\图片\Ribbon的7.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Ribbon的7.png)
 
 
 
-![](.\图片\Ribbon的8.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Ribbon的8.png)
 
 
 
@@ -716,7 +716,7 @@ cloud-consul-order-80
 
 #### 1,默认我们使用eureka的新版本时,它默认集成了ribbon:
 
-![](.\图片\Ribbon的9.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Ribbon的9.png)
 
 **==这个starter中集成了reibbon了==**
 
@@ -726,15 +726,15 @@ cloud-consul-order-80
 
 **放到order模块中,因为只有order访问pay时需要负载均衡**
 
-![](.\图片\Ribbon的10.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Ribbon的10.png)
 
 
 
 #### 3,RestTemplate类:
 
-![](.\图片\Ribbon的11.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Ribbon的11.png)
 
-![](.\图片\Ribbon的12.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Ribbon的12.png)
 
 ```java
 RestTemplate的:
@@ -752,7 +752,7 @@ RestTemplate的:
 
 **Rule接口有7个实现类,每个实现类代表一个负载均衡算法**
 
-![](.\图片\Ribbon的14.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Ribbon的14.png)
 
 
 
@@ -764,7 +764,7 @@ RestTemplate的:
 
 **==这里使用eureka的那一套服务==**
 
-![](.\图片\Ribbon的15.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Ribbon的15.png)
 
 **==也就是不能放在主启动类所在的包及子包下==**
 
@@ -772,15 +772,15 @@ RestTemplate的:
 
 ##### 2,额外创建一个包
 
-![](.\图片\Ribbon的16.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Ribbon的16.png)
 
 ##### 3,创建配置类,指定负载均衡算法
 
-![](.\图片\Ribbon的17.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Ribbon的17.png)
 
 ##### 4,在主启动类上加一个注解
 
-![](.\图片\Ribbon的18.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Ribbon的18.png)
 
 **表示,访问CLOUD_pAYMENT_SERVICE的服务时,使用我们自定义的负载均衡算法**
 
@@ -794,9 +794,9 @@ RestTemplate的:
 
 ##### 1,ribbon的轮询算法原理
 
-![](.\图片\Ribbon的19.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Ribbon的19.png)
 
-![](.\图片\Ribbon的21.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Ribbon的21.png)
 
 
 
@@ -804,37 +804,37 @@ RestTemplate的:
 
 **1,给**pay模块(8001,8002),的controller方法添加一个方法,返回当前节点端口
 
-![](.\图片\Ribbon的23.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Ribbon的23.png)
 
-![](.\图片\Ribbon的22.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Ribbon的22.png)
 
 **2,修改order模块**
 
 去掉@LoadBalanced
 
-![](.\图片\Ribbon的24.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Ribbon的24.png)
 
 
 
 ##### 3,自定义接口
 
-![](.\图片\Ribbon的29.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Ribbon的29.png)
 
 ​					==具体的算法在实现类中实现==
 
 ##### 4,接口实现类
 
-![](.\图片\Ribbon的25.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Ribbon的25.png)
 
-![](.\图片\Ribbon的26.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Ribbon的26.png)
 
 
 
 ##### 5,修改controller:
 
-![](.\图片\Ribbon的27.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Ribbon的27.png)
 
-![](.\图片\Ribbon的28.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Ribbon的28.png)
 
 
 
@@ -870,13 +870,13 @@ RestTemplate的:
 
 ## 11,OpenFeign
 
-![](.\图片\Feign的1.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Feign的1.png)
 
 **是一个声明式的web客户端,只需要创建一个接口,添加注解即可完成微服务之间的调用**
 
 
 
-![](.\图片\Feign的2.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Feign的2.png)
 
 ==就是A要调用B,Feign就是在A中创建一个一模一样的B对外提供服务的的接口,我们调用这个接口,就可以服务到B==
 
@@ -884,7 +884,7 @@ RestTemplate的:
 
 ### **Feign与OpenFeign区别**
 
-![](.\图片\Feign的3.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Feign的3.png)
 
 
 
@@ -905,19 +905,19 @@ RestTemplate的:
 
 #### 3,配置文件
 
-![](.\图片\Feign的4.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Feign的4.png)
 
 #### 4,主启动类
 
-![](.\图片\Feign的5.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Feign的5.png)
 
 #### 5,fegin需要调用的其他的服务的接口
 
-![](.\图片\Feign的6.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Feign的6.png)
 
 #### 6,controller
 
-![](.\图片\Feign的7.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Feign的7.png)
 
 #### 7测试:
 
@@ -943,7 +943,7 @@ RestTemplate的:
 
 **因为OpenFeign的底层是ribbon进行负载均衡,所以它的超时时间是由ribbon控制**
 
-![](.\图片\Feign的8.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Feign的8.png)
 
 
 
@@ -951,12 +951,12 @@ RestTemplate的:
 
 ### OpenFeign日志:
 
-![](.\图片\Feign的9.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Feign的9.png)
 
 
 
 **OpenFeign的日志级别有:**
-![](.\图片\Feign的10.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Feign的10.png)
 
 
 
@@ -966,15 +966,15 @@ RestTemplate的:
 
 **实现在配置类中添加OpenFeign的日志类**
 
-![](.\图片\Feign的11.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Feign的11.png)
 
 #### 2,为指定类设置日志级别:
 
-![](.\图片\Feign的13.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Feign的13.png)
 
 **配置文件中:**
 
-![](.\图片\Feign的12.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Feign的12.png)
 
 
 
@@ -988,17 +988,17 @@ RestTemplate的:
 
 ## 12,Hystrix服务降级
 
-![](.\图片\Hystrix的2.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的2.png)
 
 
 
-![](.\图片\Hystrix的3.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的3.png)
 
 
 
 
 
-![](.\图片\Hystrix的4.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的4.png)
 
 
 
@@ -1040,19 +1040,19 @@ RestTemplate的:
 
 ##### 3,配置文件
 
-![](.\图片\Hystrix的5.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的5.png)
 
 ##### 4,主启动类
 
-![](.\图片\Hystrix的8.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的8.png)
 
 ##### 5,service
 
-![](.\图片\Hystrix的6.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的6.png)
 
 ##### 6controller
 
-![](.\图片\Hystrix的7.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的7.png)
 
 ##### 7,先测试:
 
@@ -1076,19 +1076,19 @@ RestTemplate的:
 
 ##### 3,配置文件
 
-![](.\图片\Hystrix的9.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的9.png)
 
 ##### 4,主启动类
 
-![](.\图片\Hystrix的11.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的11.png)
 
 ##### 5,远程调用pay模块的接口:
 
-![](.\图片\Hystrix的12.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的12.png)
 
 ##### 6,controller:
 
-![](.\图片\Hystrix的13.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的13.png)
 
 ##### 7,测试
 
@@ -1096,15 +1096,15 @@ RestTemplate的:
 
 ​			再次压测2万并发,发现order访问也变慢了
 
-![](.\图片\Hystrix的14.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的14.png)
 
 
 
 **解决:**
 
-![](.\图片\Hystrix的15.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的15.png)
 
-##### ![](.\图片\Hystrix的16.png)
+##### ![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的16.png)
 
 
 
@@ -1118,17 +1118,17 @@ RestTemplate的:
 
 ###### 1,为service的指定方法(会延迟的方法)添加@HystrixCommand注解
 
-![](.\图片\Hystrix的17.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的17.png)
 
 ###### 2,主启动类上,添加激活hystrix的注解
 
-![](.\图片\Hystrix的18.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的18.png)
 
 ###### 3,触发异常
 
-![](.\图片\Hystrix的19.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的19.png)
 
-![](.\图片\Hystrix的20.png)**可以看到,也触发了降级**
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的20.png)**可以看到,也触发了降级**
 
 
 
@@ -1136,21 +1136,21 @@ RestTemplate的:
 
 一般服务降级,都是放在客户端(order模块),
 
-![](.\图片\Hystrix的21.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的21.png)
 
 ###### 1,修改配置文件:
 
-![](.\图片\Hystrix的22.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的22.png)
 
 ###### **2,主启动类添加直接,启用hystrix:**
 
-![](.\图片\Hystrix的23.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的23.png)
 
 ​	
 
 ###### 3,修改controller,添加降级方法什么的
 
-![](.\图片\Hystrix的24.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的24.png)
 
 
 
@@ -1177,25 +1177,25 @@ RestTemplate的:
 
 ###### 1,创建一个全局方法
 
-![](.\图片\Hystrix的26.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的26.png)
 
 ###### 2,使用注解指定其为全局降级方法(默认降级方法)
 
-![](.\图片\Hystrix的27.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的27.png)
 
-![](.\图片\Hystrix的25.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的25.png)
 
 
 
 ###### 3,业务方法使用默认降级方法:
 
-![](.\图片\Hystrix的28.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的28.png)
 
 
 
 ###### 4,测试:
 
-![](.\图片\Hystrix的29.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的29.png)
 
 
 
@@ -1213,15 +1213,15 @@ RestTemplate的:
 
 ###### 1,Payservice接口是远程调用pay模块的,我们这里创建一个类实现service接口,在实现类中统一处理异常
 
-![](.\图片\Hystrix的30.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的30.png)
 
 ###### 2,修改配置文件:添加:
 
-![](.\图片\Hystrix的31.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的31.png)
 
 ###### 	3,让PayService的实现类生效:
 
-![](.\图片\Hystrix的32.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的32.png)
 
 ```java
 它的运行逻辑是:
@@ -1236,7 +1236,7 @@ RestTemplate的:
 
 ==此时将pay服务关闭,order再次访问==
 
-![](.\图片\Hystrix的33.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的33.png)
 
 可以看到,并没有报500错误,而是降级访问==实现类==的同名方法
 
@@ -1254,13 +1254,13 @@ RestTemplate的:
 
 ### 使用服务熔断:
 
-![](.\图片\Hystrix的34.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的34.png)
 
 **比如并发达到1000,我们就拒绝其他用户访问,在有用户访问,就访问降级方法**
 
 
 
-![](.\图片\Hystrix的35.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的35.png)
 
 
 
@@ -1268,12 +1268,12 @@ RestTemplate的:
 
 ##### **1,修改Payservice接口,添加服务熔断相关的方法:**
 
-![](.\图片\Hystrix的37.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的37.png)
 
 这里属性整体意思是:
 			10秒之内(窗口,会移动),如果并发==超过==10个,或者10个并发中,失败了6个,就开启熔断器
 
-![image-20200414152637247](.\图片\Hystrix的43.png)
+![image-20200414152637247](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的43.png)
 
 
 
@@ -1283,7 +1283,7 @@ IdUtil是Hutool包下的类,这个Hutool就是整合了所有的常用方法,比
 
 
 
-![](.\图片\Hystrix的36.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的36.png)
 
 ```java
 断路器的打开和关闭,是按照一下5步决定的
@@ -1301,7 +1301,7 @@ IdUtil是Hutool包下的类,这个Hutool就是整合了所有的常用方法,比
 
 添加一个测试方法;
 
-![](.\图片\Hystrix的39.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的39.png)
 
 
 
@@ -1311,11 +1311,11 @@ IdUtil是Hutool包下的类,这个Hutool就是整合了所有的常用方法,比
 
 ==多次访问,并且错误率超过60%:==
 
-![](.\图片\Hystrix的40.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的40.png)
 
 此时服务熔断,此时即使访问正确的也会报错:
 
-![](.\图片\Hystrix的41.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的41.png)
 
 **但是,当过了几秒后,又恢复了**
 
@@ -1337,7 +1337,7 @@ IdUtil是Hutool包下的类,这个Hutool就是整合了所有的常用方法,比
 
 ​		以后需要什么属性,查看这个类即可
 
-![](.\图片\Hystrix的38.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的38.png)
 
 
 
@@ -1349,25 +1349,25 @@ IdUtil是Hutool包下的类,这个Hutool就是整合了所有的常用方法,比
 
 ### 总结:
 
-![](.\图片\Hystrix的42.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的42.png)
 
 **==当断路器开启后:==**
 
-​	![](.\图片\Hystrix的44.png)
+​	![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的44.png)
 
 
 
 **==其他参数:==**
 
-![](.\图片\Hystrix的45.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的45.png)
 
-![](.\图片\Hystrix的46.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的46.png)
 
-![](.\图片\Hystrix的47.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的47.png)
 
-![](.\图片\Hystrix的48.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的48.png)
 
-![](.\图片\Hystrix的49.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的49.png)
 
 
 
@@ -1402,7 +1402,7 @@ IdUtil是Hutool包下的类,这个Hutool就是整合了所有的常用方法,比
 
 #### HystrixDashboard
 
-![](.\图片\Hystrix的51.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的51.png)
 
 #### 2,使用HystrixDashboard:
 
@@ -1414,17 +1414,17 @@ IdUtil是Hutool包下的类,这个Hutool就是整合了所有的常用方法,比
 
 ##### 3,配置文件
 
-![](.\图片\Hystrix的52.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的52.png)
 
 ##### 4,主启动类
 
-![](.\图片\Hystrix的53.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的53.png)
 
 ##### 5,修改所有pay模块(8001,8002,8003...)
 
 **他们都添加一个pom依赖:**
 
-![](.\图片\Hystrix的54.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的54.png)
 
 之前的pom文件中都添加过了,==这个是springboot的监控组件==
 
@@ -1438,7 +1438,7 @@ IdUtil是Hutool包下的类,这个Hutool就是整合了所有的常用方法,比
 
 ==8001的主启动类添加:==
 
-![](.\图片\Hystrix的55.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的55.png)
 
 **其他8002,8003都是一样的**
 
@@ -1448,21 +1448,21 @@ IdUtil是Hutool包下的类,这个Hutool就是整合了所有的常用方法,比
 
 **然后在web界面,指定9001要监控8001:**
 
-##### ![](.\图片\Hystrix的56.png)
+##### ![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的56.png)
 
 
 
-![](.\图片\Hystrix的57.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的57.png)
 
-![](.\图片\Hystrix的59.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的59.png)
 
-![](.\图片\Hystrix的58.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的58.png)
 
-![](.\图片\Hystrix的60.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的60.png)
 
-![](.\图片\Hystrix的61.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的61.png)
 
-![](.\图片\Hystrix的62.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Hystrix的62.png)
 
 
 
@@ -1490,35 +1490,35 @@ zuul停更了,
 
 
 
-![](.\图片\gateway的1.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的1.png)
 
-![](.\图片\gateway的2.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的2.png)
 
 **gateway之所以性能号,因为底层使用WebFlux,而webFlux底层使用netty通信(NIO)**
 
 
 
-![](.\图片\gateway的3.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的3.png)
 
 
 
 ### GateWay的特性:
 
-![](.\图片\gateway的4.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的4.png)
 
 
 
 ### GateWay与zuul的区别:
 
-![](.\图片\gateway的5.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的5.png)
 
 
 
 ### zuul1.x的模型:
 
-![](.\图片\gateway的6.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的6.png)
 
-![](.\图片\gateway的7.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的7.png)
 
 
 
@@ -1528,7 +1528,7 @@ zuul停更了,
 
 **是一个非阻塞的web框架,类似springmvc这样的**
 
-![](.\图片\gateway的8.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的8.png)
 
 
 
@@ -1536,7 +1536,7 @@ zuul停更了,
 
 #### 1,路由:
 
-![](.\图片\gateway的9.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的9.png)
 
 就是根据某些规则,将请求发送到指定服务上
 
@@ -1544,7 +1544,7 @@ zuul停更了,
 
 #### 2,断言:
 
-![](.\图片\gateway的10.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的10.png)
 
 就是判断,如果符合条件就是xxxx,反之yyyy
 
@@ -1552,7 +1552,7 @@ zuul停更了,
 
 #### 3,过滤:
 
-![](.\图片\gateway的11.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的11.png)
 
 ​	**路由前后,过滤请求**
 
@@ -1562,9 +1562,9 @@ zuul停更了,
 
 ### GateWay的工作原理:
 
-![](.\图片\gateway的12.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的12.png)
 
-![](.\图片\gateway的13.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的13.png)
 
 
 
@@ -1580,21 +1580,21 @@ zuul停更了,
 
 #### 2,配置文件
 
-![](.\图片\gateway的14.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的14.png)
 
 #### 3,主启动类
 
-![](.\图片\gateway的15.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的15.png)
 
 #### 4,针对pay模块,设置路由:
 
-![](.\图片\gateway的16.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的16.png)
 
-![](.\图片\gateway的18.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的18.png)
 
 **==修改GateWay模块(9527)的配置文件==:**
 
-![](.\图片\gateway的17.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的17.png)
 
 这里表示,
 
@@ -1617,7 +1617,7 @@ zuul停更了,
 
 ​		localhost:9527/payment/get/1
 
-![](.\图片\gateway的19.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的19.png)
 
 
 
@@ -1633,7 +1633,7 @@ zuul停更了,
 
 ##### 创建配置类:
 
-![](.\图片\gateway的20.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的20.png)
 
 #### 8,然后重启服务即可
 
@@ -1653,7 +1653,7 @@ zuul停更了,
 
 #### 修改GateWay模块的配置文件:
 
-![](.\图片\gateway的21.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的21.png)
 
 
 
@@ -1667,17 +1667,17 @@ zuul停更了,
 
 ### Pridicate断言:
 
-![](.\图片\gateway的24.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的24.png)
 
 **我们之前在配置文件中配置了断言:**
 
-![](.\图片\gateway的22.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的22.png)
 
 **这个断言表示,如果外部访问路径是指定路径,就路由到指定微服务上**
 
 可以看到,这里有一个Path,这个是断言的一种,==断言的类型==:
 
-![](.\图片\gateway的23.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的23.png)
 
 
 
@@ -1686,7 +1686,7 @@ After:
 		可以指定,只有在指定时间后,才可以路由到指定微服务
 ```
 
-![](.\图片\gateway的26.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的26.png)
 
 ​				这里表示,只有在==2020年的2月21的15点51分37秒==之后,访问==才可以路由==
 
@@ -1694,7 +1694,7 @@ After:
 
 如何获取当前时区?**
 
-![](.\图片\gateway的25.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的25.png)
 
 
 
@@ -1705,7 +1705,7 @@ between:
 		需要指定两个时间,在他们之间的时间才可以访问
 ```
 
-![](.\图片\gateway的27.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的27.png)
 
 
 
@@ -1716,9 +1716,9 @@ cookie:
 		只有包含某些指定cookie(key,value),的请求才可以路由
 ```
 
-![](.\图片\gateway的28.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的28.png)
 
-![](.\图片\gateway的29.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的29.png)
 
 
 
@@ -1727,12 +1727,12 @@ Header:
 		只有包含指定请求头的请求,才可以路由
 ```
 
-![](.\图片\gateway的31.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的31.png)
 
-![](.\图片\gateway的32.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的32.png)
 
 测试:
-![](.\图片\gateway的33.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的33.png)
 
 
 
@@ -1747,13 +1747,13 @@ host:
     那么这里就可以设置,只有用户是www.aa.com的请求,才进行路由
 ```
 
-![](.\图片\gateway的34.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的34.png)
 
-![gateway的34](.\图片\gateway的35.png)
+![gateway的34](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的35.png)
 
-![](.\图片\gateway的36.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的36.png)
 
-![](.\图片\gateway的37.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的37.png)
 
 可以看到,如果带了域名访问,就可以,但是直接访问ip地址.就报错了
 
@@ -1768,7 +1768,7 @@ method:
 		只有指定请求才可以路由,比如get请求...
 ```
 
-![](.\图片\gateway的38.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的38.png)
 
 ```java
 path:
@@ -1776,7 +1776,7 @@ path:
      比如访问,/abc才路由
 ```
 
-![](.\图片\gateway的39.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的39.png)
 
 
 
@@ -1785,7 +1785,7 @@ Query:
 		必须带有请求参数才可以访问
 ```
 
-![](.\图片\gateway的40.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的40.png)
 
 
 
@@ -1795,7 +1795,7 @@ Query:
 
 ### Filter过滤器:
 
-![](.\图片\gateway的41.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的41.png)
 
 
 
@@ -1807,13 +1807,13 @@ Query:
 
 #### 种类:
 
-![](.\图片\gateway的42.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的42.png)
 
 GateWayFilter,单一的过滤器
 
 **与断言类似,比如闲置,请求头,只有特定的请求头才放行,反之就过滤**:
 
-![](.\图片\gateway的43.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的43.png)
 
 GlobalFilter,全局过滤器:
 
@@ -1825,13 +1825,13 @@ GlobalFilter,全局过滤器:
 
 实现两个接口
 
-![](.\图片\gateway的44.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的44.png)
 
 ​	**然后启动服务,即可,因为过滤器通过@COmponet已经加入到容器了**
 
-![](.\图片\gateway的46.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的46.png)
 
-![](.\图片\gateway的45.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/gateway的45.png)
 
 
 
@@ -1872,13 +1872,13 @@ GlobalFilter,全局过滤器:
 
 所以有了springconfig配置中心
 
-![](.\图片\springconfig的1.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的1.png)
 
-![](.\图片\springconfig的2.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的2.png)
 
-![](.\图片\springconfig的3.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的3.png)
 
-![](.\图片\springconfig的4.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的4.png)
 
 
 
@@ -1890,7 +1890,7 @@ GlobalFilter,全局过滤器:
 
 **初始化git环境:**
 
-![](.\图片\springconfig的5.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的5.png)
 
 
 
@@ -1902,15 +1902,15 @@ GlobalFilter,全局过滤器:
 
 #### 3,配置文件
 
-![](.\图片\springconfig的6.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的6.png)
 
 #### 4,主启动类
 
-![](.\图片\springconfig的7.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的7.png)
 
 #### 5,修改hosts:
 
-![](.\图片\springconfig的8.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的8.png)
 
 #### 6,配置完成
 
@@ -1918,33 +1918,33 @@ GlobalFilter,全局过滤器:
 
 启动3344	(要先启动eureka)
 
-![](.\图片\springconfig的9.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的9.png)
 
 它实际上就是,读取到配置文件中的GitHub的地址,然后拼接上/master/config-dev.yml
 
 #### 7,读取配置文件的规则:
 
-![](.\图片\springconfig的10.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的10.png)
 
 
 
 ==2,==
 
-![](.\图片\springconfig的11.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的11.png)
 
 **这里默认会读取master分支,因为我们配置文件中配置了**
 
-![](.\图片\springconfig的12.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的12.png)
 
 ==3==
 
-![](.\图片\springconfig的13.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的13.png)
 
 注意,这个方式读取到的配置是==json格式==的
 
 **所有规则:**
 
-![](.\图片\springconfig的14.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的14.png)
 
 
 
@@ -1964,23 +1964,23 @@ GlobalFilter,全局过滤器:
 
 这个配置文件的作用是,先到配置中心加载配置,然后加载到application.yml中
 
-![](.\图片\springconfig的15.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的15.png)
 
-![](.\图片\springconfig的16.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的16.png)
 
 
 
 #### 4,主启动类:
 
-![](.\图片\springconfig的17.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的17.png)
 
 #### 5,controller类
 
 就是上面提到的,以rest风格将配置对外暴露
 
-![](.\图片\springconfig的18.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的18.png)
 
-![](.\图片\springconfig的19.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的19.png)
 
 **如果客户端运行正常,就会读取到github上配置文件的,config.info下的配置**
 
@@ -1990,7 +1990,7 @@ GlobalFilter,全局过滤器:
 
 ​	访问3355的  /configInfo
 
-![](.\图片\springconfig的21.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的21.png)
 
 
 
@@ -2008,15 +2008,15 @@ GlobalFilter,全局过滤器:
 
 ##### 1,修改3355,添加一个pom依赖:
 
-![](.\图片\springconfig的22.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的22.png)
 
 ##### 2,修改配置文件,添加一个配置:
 
-![](.\图片\springconfig的23.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的23.png)
 
 ##### 3,修改controller:
 
-![](.\图片\springconfig的24.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的24.png)
 
 
 
@@ -2026,7 +2026,7 @@ GlobalFilter,全局过滤器:
 
 因为此时,还需要==外部==发送post请求通知3355
 
-![](.\图片\springconfig的25.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的25.png)
 
 **此时在刷新3355,发现可以获取到最新的配置文件了,这就实现了动态获取配置文件,因为3355并没有重启**
 
@@ -2064,7 +2064,7 @@ GlobalFilter,全局过滤器:
 
 ## SpringCloud Bus:
 
-![](.\图片\springconfig的26.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的26.png)
 
 
 
@@ -2072,9 +2072,9 @@ GlobalFilter,全局过滤器:
 
 
 
-![](.\图片\springconfig的27.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的27.png)
 
-![](.\图片\springconfig的31.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的31.png)
 
 注意,这里年张图片,就代表两种广播方式
 
@@ -2088,7 +2088,7 @@ GlobalFilter,全局过滤器:
 
 **为什么被称为总线?**
 
-![](.\图片\springconfig的28.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的28.png)
 
 ```java
 就是通过消息队列达到广播的效果
@@ -2103,7 +2103,7 @@ GlobalFilter,全局过滤器:
 
 #### 1,配置rabbitmq环境:
 
-![](.\图片\springconfig的29.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的29.png)
 
 
 
@@ -2111,7 +2111,7 @@ GlobalFilter,全局过滤器:
 
 ​		==**复制3355即可,创建为3366**==
 
-![](.\图片\springconfig的30.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的30.png)
 
 全部复制3355的即可
 
@@ -2123,13 +2123,13 @@ GlobalFilter,全局过滤器:
 
 ​		==就是上面两个图片的两种方式==
 
-![](.\图片\springconfig的32.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的32.png)
 
 **这两种方式,第二种跟合适,因为:**
 
 ​			==第一种的缺点:==
 
-![](.\图片\springconfig的33.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/springconfig的33.png)
 
 
 
@@ -2141,15 +2141,15 @@ GlobalFilter,全局过滤器:
 
 ###### 1,修改配置文件:
 
-![](.\图片\Bus的1.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Bus的1.png)
 
 ###### 2,添加pom
 
 **springboot的监控组件,和消息总线**
 
-![](.\图片\Bus的3.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Bus的3.png)
 
-![](.\图片\Bus的2.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Bus的2.png)
 
 
 
@@ -2157,9 +2157,9 @@ GlobalFilter,全局过滤器:
 
 ###### 1,pom:
 
-![](.\图片\Bus的3.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Bus的3.png)
 
-![Bus的2](.\图片\Bus的2.png)
+![Bus的2](C:/Users/Administrator/Desktop/新建文件夹/图片/Bus的2.png)
 
 
 
@@ -2167,9 +2167,9 @@ GlobalFilter,全局过滤器:
 
 ==注意配置文件的名字,要改为bootstrap.yml==
 
-![](.\图片\Bus的5.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Bus的5.png)
 
-![image-20200415102708661](.\图片\Bus的4)
+![image-20200415102708661](C:/Users/Administrator/Desktop/新建文件夹/图片/Bus的4)
 
 
 
@@ -2193,13 +2193,13 @@ GlobalFilter,全局过滤器:
 
 ==此时只需要刷新3344,即可让3355,3366动态获取最新的配置文件==
 
-![](.\图片\Bus的6.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Bus的6.png)
 
 
 
 其原理就是:
 
-![](.\图片\Bus的7.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Bus的7.png)
 
 **所有客户端都监听了一个rabbitMq的topic,我们将信息放入这个topic,所有客户端都可以送到,从而实时更新**
 
@@ -2215,17 +2215,17 @@ GlobalFilter,全局过滤器:
 
 ​		就是只通知部分服务,比如只通知3355,不通知3366
 
-![](.\图片\Bus的8.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Bus的8.png)
 
-![Bus的8](.\图片\Bus的9.png)
+![Bus的8](C:/Users/Administrator/Desktop/新建文件夹/图片/Bus的9.png)
 
 
 
 **只通知3355**
 
-![](.\图片\Bus的11.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Bus的11.png)
 
-​	![](.\图片\Bus的12.png)
+​	![](C:/Users/Administrator/Desktop/新建文件夹/图片/Bus的12.png)
 
 **可以看到,实际上就是通过==微服务的名称+端口号==进行指定**
 
@@ -2263,21 +2263,21 @@ GlobalFilter,全局过滤器:
 
 ​			不需要管底层是kafka还是rabbitMq
 
-![](.\图片\SpringCloudStream的1.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的1.png)
 
 ### ==什么是Spring Cloud Stream==
 
-![](.\图片\SpringCloudStream的2.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的2.png)
 
 
 
 
 
-![](.\图片\SpringCloudStream的3.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的3.png)
 
-![](.\图片\SpringCloudStream的4.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的4.png)
 
-![](.\图片\SpringCloudStream的5.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的5.png)
 
 
 
@@ -2285,7 +2285,7 @@ GlobalFilter,全局过滤器:
 
 ### ==**Spring Cloud Stream是怎么屏蔽底层差异的?**==
 
-![](.\图片\SpringCloudStream的6.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的6.png)
 
 
 
@@ -2293,11 +2293,11 @@ GlobalFilter,全局过滤器:
 
 **绑定器:**
 
-![](.\图片\SpringCloudStream的7.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的7.png)
 
-![](.\图片\SpringCloudStream的8.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的8.png)
 
-![](.\图片\SpringCloudStream的9.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的9.png)
 
 
 
@@ -2305,7 +2305,7 @@ GlobalFilter,全局过滤器:
 
 ### **Spring Cloud Streamd 通信模式:**
 
-![](.\图片\SpringCloudStream的10.png)![](.\图片\SpringCloudStream的11.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的10.png)![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的11.png)
 
 
 
@@ -2313,11 +2313,11 @@ GlobalFilter,全局过滤器:
 
 ### Spring Cloud Stream的业务流程:
 
-![](.\图片\SpringCloudStream的12.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的12.png)
 
-![](.\图片\SpringCloudStream的14.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的14.png)
 
-![](.\图片\SpringCloudStream的13.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的13.png)
 
 ```java
 类似flume中的channel,source,sink  估计是借鉴(抄袭)的
@@ -2333,7 +2333,7 @@ GlobalFilter,全局过滤器:
 
 ### 常用注解和api:
 
-![](.\图片\SpringCloudStream的15.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的15.png)
 
 
 
@@ -2343,7 +2343,7 @@ GlobalFilter,全局过滤器:
 
 需要创建三个项目,一个生产者,两个消费者
 
-![](.\图片\SpringCloudStream的16.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的16.png)
 
 ### 1,创建生产者
 
@@ -2351,21 +2351,21 @@ GlobalFilter,全局过滤器:
 
 #### 2,配置文件
 
-![image-20200415114816133](.\图片\SpringCloudStream的17)
+![image-20200415114816133](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的17)
 
-![](.\图片\SpringCloudStream的18.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的18.png)
 
 #### 3,主启动类
 
-![](.\图片\SpringCloudStream的19.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的19.png)
 
 #### 4,service和实现类
 
 service定义发送消息
 
-![](.\图片\SpringCloudStream的20.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的20.png)
 
-![](.\图片\SpringCloudStream的21.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的21.png)
 
 **这里,就会调用send方法,将消息发送给channel,**
 
@@ -2373,7 +2373,7 @@ service定义发送消息
 
 #### 5,controller
 
-![](.\图片\SpringCloudStream的22.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的22.png)
 
 #### 6,可以测试
 
@@ -2401,17 +2401,17 @@ service定义发送消息
 
 **==input==就表示,当前服务是一个消费者,需要消费消息,下面就是指定消费哪个Exchange中的消息**
 
-![](.\图片\SpringCloudStream的23.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的23.png)
 
-![](.\图片\SpringCloudStream的24.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的24.png)
 
 #### 3,主启动类
 
-![](.\图片\SpringCloudStream的25.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的25.png)
 
 #### 4,业务类(消费数据)
 
-![](.\图片\SpringCloudStream的26.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的26.png)
 
 **生产者发送消息时,使用send方法发送,send方法发送的是一个个Message,里面封装了数据**
 
@@ -2421,7 +2421,7 @@ service定义发送消息
 
 **此时使用生产者生产消息**
 
-![](.\图片\SpringCloudStream的27.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的27.png)
 
 ==可以看到,消费者已经接收到消息了==
 
@@ -2455,17 +2455,17 @@ service定义发送消息
 
 但是此时查询消费者,发现8802,8803==都消费到了同一条数据==
 
-![](.\图片\SpringCloudStream的28.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的28.png)
 
-![](.\图片\SpringCloudStream的29.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的29.png)
 
 #### 1,自定义分组
 
 **修改8802,8803的配置文件**
 
-![](.\图片\SpringCloudStream的30.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的30.png)
 
-![](.\图片\SpringCloudStream的31 - 副本.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的31 - 副本.png)
 
 **现在将8802,8803都分到了A组**
 
@@ -2473,11 +2473,11 @@ service定义发送消息
 
 **然后此时生产者生产两条消息**
 
-![](.\图片\SpringCloudStream的33.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的33.png)
 
-![](.\图片\SpringCloudStream的34.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的34.png)
 
-![](.\图片\SpringCloudStream的35.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/SpringCloudStream的35.png)
 
 **可以看到,每人只消费了一条消息,并且没有重复消费**
 
@@ -2530,11 +2530,11 @@ service定义发送消息
 
 **sleuth要解决的问题:**
 
-![](.\图片\sleuth的1.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sleuth的1.png)
 
 **而来sleuth就是用于追踪每个请求的整体链路**
 
-![](.\图片\sleuth的2.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sleuth的2.png)
 
 
 
@@ -2542,7 +2542,7 @@ service定义发送消息
 
 #### 1,安装zipkin:
 
-![](.\图片\sleuth的3.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sleuth的3.png)
 
 **运行jar包**
 
@@ -2552,17 +2552,17 @@ service定义发送消息
 
 ​			localhost:9411/zipkin/
 
-![](.\图片\sleuth的4.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sleuth的4.png)
 
 
 
 **一条链路完整图片:**
 
-![](.\图片\sleuth的5.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sleuth的5.png)
 
 **精简版:**
 
-![](.\图片\sleuth的6.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sleuth的6.png)
 
 **可以看到,类似链表的形式**
 
@@ -2582,13 +2582,13 @@ service定义发送消息
 
 **引入pom:**
 
-![](.\图片\sleuth的7.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sleuth的7.png)
 
 这个包虽然叫zipkin但是,里面包含了zpikin与sleuth
 
 **修改配置文件:**
 
-![](.\图片\sleuth的8.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sleuth的8.png)
 
 
 
@@ -2614,7 +2614,7 @@ service定义发送消息
 
 启动7001.8001,80,9411
 
-![](.\图片\sleuth的9.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sleuth的9.png)
 
 
 
@@ -2636,7 +2636,7 @@ service定义发送消息
 
 ==支持的功能==
 
-![](.\图片\Alibaba的1.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的1.png)
 
 几乎可以将之前的Spring Cloud代替
 
@@ -2647,7 +2647,7 @@ service定义发送消息
 
 
 ==具体组件==:
-![](.\图片\Alibaba的2.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的2.png)
 
 
 
@@ -2707,9 +2707,9 @@ service定义发送消息
 
 父项目管理alibaba的依赖:
 
-![](.\图片\Alibaba的4.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的4.png)
 
-![](.\图片\Alibaba的3.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的3.png)
 
 ==9001的pom==:
 
@@ -2717,15 +2717,15 @@ service定义发送消息
 
 #### 2,配置文件
 
-![](.\图片\Alibaba的5.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的5.png)
 
 #### 3,启动类
 
-![](.\图片\Alibaba的6.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的6.png)
 
 #### 4,controller:
 
-![](.\图片\Alibaba的7.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的7.png)
 
 #### 5,测试
 
@@ -2759,7 +2759,7 @@ service定义发送消息
 
 #### 2,配置文件
 
-![](.\图片\Alibaba的8.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的8.png)
 
 **这个server-url的作用是,我们在controller,需要使用RestTempalte远程调用9001,**
 
@@ -2769,17 +2769,17 @@ service定义发送消息
 
 #### 3,主启动类
 
-![](.\图片\Alibaba的9.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的9.png)
 
 #### 4,编写配置类
 
 ​	==因为Naocs要使用Ribbon进行负载均衡,那么就需要使用RestTemplate==
 
-![](.\图片\Alibaba的10.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的10.png)
 
 #### 5,controller:
 
-![](.\图片\Alibaba的11.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的11.png)
 
 
 
@@ -2795,9 +2795,9 @@ service定义发送消息
 
 Nacos它既可以支持CP,也可以支持AP,可以切换
 
-![](.\图片\Alibaba的12.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的12.png)
 
-![](.\图片\Alibaba的13.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的13.png)
 
 ==下面这个curl命令,就是切换模式==
 
@@ -2807,7 +2807,7 @@ Nacos它既可以支持CP,也可以支持AP,可以切换
 
 ### 使用Nacos作为配置中心:
 
-![](.\图片\Alibaba的14.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的14.png)
 
 **==需要创建配置中心的客户端模块==**
 
@@ -2821,23 +2821,23 @@ cloudalibaba-Nacos-config-client-3377
 
 ​			主要是为了可以与spring clodu config无缝迁移
 
-![](.\图片\Alibaba的15.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的15.png)
 
 ```java
 可以看到
 ```
 
-![](.\图片\Alibaba的16.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的16.png)
 
 
 
 #### 3,主启动类
 
-![](.\图片\Alibaba的18.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的18.png)
 
 #### 4,controller
 
-![](.\图片\Alibaba的17.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的17.png)
 
 ```java
 可以看到,这里也添加了@RefreshScope
@@ -2845,19 +2845,19 @@ cloudalibaba-Nacos-config-client-3377
   
 ```
 
-![](.\图片\Alibaba的19.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的19.png)
 
 #### 5,在Nacos添加配置信息:
 
 ==**Nacos的配置规则:**==
 
-![](.\图片\Alibaba的20.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的20.png)
 
 **配置规则,就是我们在客户端如何指定读取配置文件,配置文件的命名的规则**
 
 默认的命名方式:
 
-![](.\图片\Alibaba的21.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的21.png)
 
 ```java
 prefix:
@@ -2870,15 +2870,15 @@ file-extension
      就是当前文件的格式(后缀),目前只支持yml和properties
 ```
 
-![](.\图片\Alibaba的24.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的24.png)
 
-![](.\图片\Alibaba的25.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的25.png)
 
 ==在web UI上创建配置文件:==
 
-![](.\图片\Alibaba的22.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的22.png)
 
-![](.\图片\Alibaba的23.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的23.png)
 
 注意,DataId就是配置文件名字:
 
@@ -2890,7 +2890,7 @@ file-extension
 
 访问3377
 
-![](.\图片\Alibaba的26.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的26.png)
 
 **拿到了配置文件中的值**
 
@@ -2910,25 +2910,25 @@ file-extension
 
 ### Nacos配置中心之分类配置:
 
-![](.\图片\Alibaba的27.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的27.png)
 
 
 
 
 
-![](.\图片\Alibaba的28.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的28.png)
 
-![](.\图片\Alibaba的29.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的29.png)
 
 NameSpace默认有一个:public名称空间
 
 这三个类似java的: 包名 + 类名 + 方法名
 
-![](.\图片\Alibaba的30.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的30.png)
 
 
 
-![](.\图片\Alibaba的31.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的31.png)
 
 
 
@@ -2936,15 +2936,15 @@ NameSpace默认有一个:public名称空间
 
 #### 1,配置不同DataId:
 
-![](.\图片\Alibaba的32.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的32.png)
 
-![](.\图片\Alibaba的33.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的33.png)
 
 
 
 ​	==通过配置文件,实现多环境的读取:==
 
-![](.\图片\Alibaba的34.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的34.png)
 
 ```java
 此时,改为dev,就会读取dev的配置文件,改为test,就会读取test的配置文件
@@ -2958,19 +2958,19 @@ NameSpace默认有一个:public名称空间
 
 直接在新建配置文件时指定组
 
-![](.\图片\Alibaba的35.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的35.png)
 
-![](.\图片\Alibaba的36.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的36.png)
 
 
 
 ==在客户端配置,使用指定组的配置文件:==
 
-![](.\图片\Alibaba的37.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的37.png)
 
 **这两个配置文件都要修改**
 
-![](.\图片\Alibaba的38.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的38.png)
 
 ​	
 
@@ -2984,13 +2984,13 @@ NameSpace默认有一个:public名称空间
 
 #### 配置不同的namespace:
 
-![](.\图片\Alibaba的39.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的39.png)
 
-![](.\图片\Alibaba的42.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的42.png)
 
 ==客户端配置使用不同名称空间:==
 
-![](.\图片\Alibaba的41.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的41.png)
 
 **要通过命名空间id指定**
 
@@ -3006,13 +3006,13 @@ OK,测试
 
 ### Nacos集群和持久化配置:
 
-![](.\图片\Alibaba的45.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的45.png)
 
 Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,就不能使用自己的数据库
 
 ​			不然每个节点一个数据库,那么数据就不统一了,需要使用外部的mysql
 
-![](.\图片\Alibaba的43.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的43.png)
 
 
 
@@ -3026,7 +3026,7 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 **2,修改Nacos安装目录下的安排application.properties,添加:**
 
-![](.\图片\Alibaba的46.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的46.png)
 
 
 
@@ -3044,7 +3044,7 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 ==官方架构图:==
 
-![](.\图片\Alibaba的45.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的45.png)
 
 **需要一个Nginx作为VIP**
 
@@ -3064,15 +3064,15 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 ​			这里使用3333,4444,5555作为三个Nacos节点监听的端口
 
-![](.\图片\Alibaba的47.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的47.png)
 
 5,我们这里就不配置在不同节点上了,就放在一个节点上
 
 ​			既然要在一个节点上启动不同Nacos实例,就要修改startup.sh,使其根据不同端口启动不同Nacos实例
 
-![](.\图片\Alibaba的48.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的48.png)
 
-![](.\图片\Alibaba的49.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的49.png)
 
 可以看到,这个脚本就是通过jvm启动nacos
 
@@ -3084,7 +3084,7 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 6,配置Nginx:
 
-​			![](.\图片\Alibaba的50.png)
+​			![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的50.png)
 
 7,启动Nacos:
 			./startup.sh -p 3333
@@ -3106,13 +3106,13 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 
 9,将微服务注册到Nacos集群:
-![](.\图片\Alibaba的51.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的51.png)
 
 10,进入Nacos的web界面
 
 ​		可以看到,已经注册成功
 
-![](.\图片\Alibaba的52.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的52.png)
 
 
 
@@ -3128,9 +3128,9 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 实现熔断与限流,就是Hystrix
 
-![](.\图片\Alibaba的53.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的53.png)
 
-​	![](.\图片\Alibaba的54.png)
+​	![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的54.png)
 
 ### ==使用sentinel:==
 
@@ -3158,31 +3158,31 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 ##### 2,新建一个项目,8401,主要用于配置sentinel
 
-1.  pom
+1. pom
 
-2.   配置文件
+2. 配置文件
 
-    ![](.\图片\Alibaba的55.png)
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的55.png)
 
-3.   主启动类
+3. 主启动类
 
-    ![](.\图片\Alibaba的56.png)
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/Alibaba的56.png)
 
-4.   controller\
+4. controller\
 
-    ![](.\图片\sentinel的1.png)
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的1.png)
 
-5.   到这里就可以启动8401
+5. 到这里就可以启动8401
 
-    ​	此时我们到sentinel中查看,发现并8401的任何信息
+   ​	此时我们到sentinel中查看,发现并8401的任何信息
 
-    ​	是因为,sentinel是懒加载,需要我们执行一次访问,才会有信息
+   ​	是因为,sentinel是懒加载,需要我们执行一次访问,才会有信息
 
-    ​	访问localhost/8401/testA
+   ​	访问localhost/8401/testA
 
-    ![](.\图片\sentinel的2.png)
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的2.png)
 
-6.   可以看到.已经开始监听了
+6. 可以看到.已经开始监听了
 
 ​    
 
@@ -3192,76 +3192,76 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 流量限制控制规则
 
-![](.\图片\sentinel的7.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的7.png)
 
-![](.\图片\sentinel的3.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的3.png)
 
 
 
-![](.\图片\sentinel的4.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的4.png)
 
 ==流控模式==:
 
-1.   直接快速失败
+1. 直接快速失败
 
-    ![](.\图片\sentinel的9.png)
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的9.png)
 
-    ![](.\图片\sentinel的5.png)
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的5.png)
 
-       ==直接失败的效果:==
+      ==直接失败的效果:==
 
-    ![](.\图片\sentinel的6.png)
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的6.png)
 
-2.  线程数:
+2. 线程数:
 
-    ​		![](.\图片\sentinel的8.png)
+   ​		![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的8.png)
 
-    ​	![](.\图片\sentinel的10.png)
+   ​	![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的10.png)
 
-    ```
-    比如a请求过来,处理很慢,在一直处理,此时b请求又过来了
-    		此时因为a占用一个线程,此时要处理b请求就只有额外开启一个线程
-    		那么就会报错
-    ```
+   ```
+   比如a请求过来,处理很慢,在一直处理,此时b请求又过来了
+   		此时因为a占用一个线程,此时要处理b请求就只有额外开启一个线程
+   		那么就会报错
+   ```
 
-    ![](.\图片\sentinel的11.png)
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的11.png)
 
-    
+   
 
-3.   关联:
+3. 关联:
 
-     ![](.\图片\sentinel的12.png)
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的12.png)
 
-     ==应用场景:  比如**支付接口**达到阈值,就要限流下**订单的接口**,防止一直有订单==
+   ==应用场景:  比如**支付接口**达到阈值,就要限流下**订单的接口**,防止一直有订单==
 
-     ![](.\图片\sentinel的13.png)
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的13.png)
 
-     **当testA达到阈值,qps大于1,就让testB之后的请求直接失败**
+   **当testA达到阈值,qps大于1,就让testB之后的请求直接失败**
 
-     可以使用postman压测
+   可以使用postman压测
 
 ​    
 
-4.   链路:
-     多个请求调用同一个微服务
+4. 链路:
+   多个请求调用同一个微服务
 
-5.   预热Warm up:
+5. 预热Warm up:
 
-    ​	 ![](.\图片\sentinel的14.png)
+   ​	 ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的14.png)
 
-      ![](.\图片\sentinel的15.png)
+     ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的15.png)
 
-     ![](.\图片\sentinel的16.png)
+    ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的16.png)
 
-     ==应用场景==
+    ==应用场景==
 
-     ![](.\图片\sentinel的17.png)
+    ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的17.png)
 
-6.   排队等待:
+6. 排队等待:
 
-    ![](.\图片\sentinel的18.png)
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的18.png)
 
-    ![](.\图片\sentinel的19.png)
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的19.png)
 
 
 
@@ -3275,17 +3275,17 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 **就是熔断降级**
 
-![](.\图片\sentinel的21.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的21.png)
 
-![](.\图片\sentinel的20.png)
-
-
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的20.png)
 
 
 
-![](.\图片\sentinel的22.png)
 
-![](.\图片\sentinel的23.png)
+
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的22.png)
+
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的23.png)
 
 
 
@@ -3293,13 +3293,13 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 新增一个请求方法用于测试
 
-![](.\图片\sentinel的24.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的24.png)
 
 ==配置RT:==
 
 ​				这里配置的PT,默认是秒级的平均响应时间
 
-![](.\图片\sentinel的25.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的25.png)
 
 默认计算平均时间是: 1秒类进入5个请求,并且响应的平均值超过阈值(这里的200ms),就报错]
 
@@ -3307,9 +3307,9 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 ==测试==
 
-![](.\图片\sentinel的27.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的27.png)
 
-![](.\图片\sentinel的26.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的26.png)
 
 **默认熔断后.就直接抛出异常**
 
@@ -3321,25 +3321,25 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 #### 2,异常比例:
 
-![](.\图片\sentinel的28.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的28.png)
 
 修改请求方法
 
-![](.\图片\sentinel的29.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的29.png)
 
 配置:
 
-![](.\图片\sentinel的31.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的31.png)
 
 
 
 ==如果没触发熔断,这正常抛出异常==:
 
-![](.\图片\sentinel的32.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的32.png)
 
 ==触发熔断==:
 
-![](.\图片\sentinel的33.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的33.png)
 
 
 
@@ -3351,9 +3351,9 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 #### 3, 异常数:
 
-![](.\图片\sentinel的34.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的34.png)
 
-![](.\图片\sentinel的35.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的35.png)
 
 一分钟之内,有5个请求发送异常,进入熔断
 
@@ -3367,9 +3367,9 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 ### 热点规则:
 
-![](.\图片\sentinel的36.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的36.png)
 
-​	![](.\图片\sentinel的37.png)
+​	![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的37.png)
 
 比如:
 
@@ -3383,35 +3383,35 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 ==如何自定义降级方法,而不是默认的抛出异常?==
 
-![](.\图片\sentinel的38.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的38.png)
 
 **使用@SentinelResource直接实现降级方法,它等同Hystrix的@HystrixCommand**
 
-![](.\图片\sentinel的39.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的39.png)
 
 
 
 ==定义热点规则:==
 
- ![](.\图片\sentinel的40.png)
+ ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的40.png)
 
-![](.\图片\sentinel的42.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的42.png)
 
 **此时我们访问/testHotkey并且带上才是p1**
 
 ​			如果qps大于1,就会触发我们定义的降级方法
 
-![](.\图片\sentinel的41.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的41.png)
 
 **但是我们的参数是P2,就没有问题**
 
-![](.\图片\sentinel的44.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的44.png)
 
 
 
 只有带了p1,才可能会触发热点限流
 
-![](.\图片\sentinel的43.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的43.png)
 
 
 
@@ -3419,21 +3419,21 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 #### 2,设置热点规则中的其他选项:
 
-![](.\图片\sentinel的45.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的45.png)
 
 **需求:**
 
-![](.\图片\sentinel的46.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的46.png)
 
 
 
-![](.\图片\sentinel的47.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的47.png)
 
 ==测试==
 
-![](.\图片\sentinel的48.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的48.png)
 
-![](.\图片\sentinel的49.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的49.png)
 
 
 
@@ -3453,7 +3453,7 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 只有触发热点规则才会降级
 
-![](.\图片\sentinel的50.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的50.png)
 
 
 
@@ -3470,16 +3470,16 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 对整体限流,比如设置qps到达100,这里限流会限制整个系统不可以
 
-*![](.\图片\sentinel的51.png)*
+*![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的51.png)*
 
 
 
-![](.\图片\sentinel的52.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的52.png)
 
 ==测试==:
-![](.\图片\sentinel的53.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的53.png)
 
-![](.\图片\sentinel的54.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的54.png)
 
 
 
@@ -3497,37 +3497,37 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 1,环境搭建
 
-1.  为8401添加依赖
+1. 为8401添加依赖
 
-    添加我们自己的commone包的依赖
+   添加我们自己的commone包的依赖
 
-    ![](.\图片\sentinel的55.png)
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的55.png)
 
-2.   额外创建一个controller类
+2. 额外创建一个controller类
 
-    ​	 ![](.\图片\sentinel的56.png)
+   ​	 ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的56.png)
 
-     
+    
 
-3.   配置限流
+3. 配置限流
 
-    **注意,我们这里配置规则,资源名指定的是@SentinelResource注解value的值,**
+   **注意,我们这里配置规则,资源名指定的是@SentinelResource注解value的值,**
 
-    **这样也是可以的,也就是不一定要指定访问路径**
+   **这样也是可以的,也就是不一定要指定访问路径**
 
-    ![](.\图片\sentinel的57.png)
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的57.png)
 
-4.   测试.
+4. 测试.
 
-    可以看到已经进入降级方法了
+   可以看到已经进入降级方法了
 
-    ![](.\图片\sentinel的58.png)
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的58.png)
 
-5.   ==此时我们关闭8401服务==
+5. ==此时我们关闭8401服务==
 
-    可以看到,这些定义的规则是临时的,关闭服务,规则就没有了
+   可以看到,这些定义的规则是临时的,关闭服务,规则就没有了
 
-    ![](.\图片\sentinel的59.png)
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的59.png)
 
 
 
@@ -3539,31 +3539,31 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 #### 自定义限流处理逻辑:
 
-1.  ==单独创建一个类,用于处理限流==
+1. ==单独创建一个类,用于处理限流==
 
-    ![](.\图片\sentinel的的1.png)
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的1.png)
 
-2.  ==在controller中,指定使用自定义类中的方法作为降级方法==
+2. ==在controller中,指定使用自定义类中的方法作为降级方法==
 
-    ![](.\图片\sentinel的的2.png)
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的2.png)
 
-3.   ==Sentinel中定义流控规则==:
+3. ==Sentinel中定义流控规则==:
 
-     这里资源名,是以url指定,也可以使用@SentinelResource注解value的值指定
+   这里资源名,是以url指定,也可以使用@SentinelResource注解value的值指定
 
-     ![](.\图片\sentinel的的5.png)
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的5.png)
 
-     
+   
 
-4.  ==测试==:
+4. ==测试==:
 
-    ![](.\图片\sentinel的的3.png)
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的3.png)
 
-5.  ==整体==:
+5. ==整体==:
 
-    ![](.\图片\sentinel的的4.png)
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的4.png)
 
-6.   
+6. 
 
 
 
@@ -3573,9 +3573,9 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 
 
-![](.\图片\sentinel的的7.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的7.png)
 
-![](.\图片\sentinel的的6.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的6.png)
 
 
 
@@ -3591,126 +3591,126 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 ### 服务熔断:
 
-1.  **启动nacos和sentinel**
+1. **启动nacos和sentinel**
 
-2.   **新建两个pay模块  9003和9004**
+2. **新建两个pay模块  9003和9004**
 
-    1.   pom
+   1. pom
 
-    2.   配置文件
+   2. 配置文件
 
-        ![](.\图片\sentinel的的8.png)*
+      ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的8.png)*
 
-    3.   主启动类 
+   3. 主启动类 
 
-        ```java
-        @SpringBootApplication
-        @EnableDiscoveryClient
-        public class PaymentMain9003 {
-        
-            public static void main(String[] args) {
-                SpringApplication.run(PaymentMain9003.class,args);
-            }
-        }
-         
-        
-        ```
+      ```java
+      @SpringBootApplication
+      @EnableDiscoveryClient
+      public class PaymentMain9003 {
+      
+          public static void main(String[] args) {
+              SpringApplication.run(PaymentMain9003.class,args);
+          }
+      }
+       
+      
+      ```
 
-    4.   controller
+   4. controller
 
-        ![](.\图片\sentinel的的9.png)
+      ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的9.png)
 
-         **然后启动9003.9004**
+       **然后启动9003.9004**
 
-3.   **新建一个order-84消费者模块:**
+3. **新建一个order-84消费者模块:**
 
-    1.   pom
+   1. pom
 
-        与上面的pay一模一样
+      与上面的pay一模一样
 
-    2.   配置文件
+   2. 配置文件
 
-        ![](.\图片\sentinel的的10.png)
+      ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的10.png)
 
-    3.   主启动类
+   3. 主启动类
 
-        ![](.\图片\sentinel的的11.png)
+      ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的11.png)
 
-    4.  配置类
+   4. 配置类
 
-        ![](.\图片\sentinel的的12.png)
+      ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的12.png)
 
-    5.   controller
+   5. controller
 
-        ![](.\图片\sentinel的的13.png)
+      ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的13.png)
 
-        
+      
 
-    6.   **==为业务方法添加fallback来指定降级方法==**:
+   6. **==为业务方法添加fallback来指定降级方法==**:
 
-        ![](.\图片\sentinel的的14.png)
+      ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的14.png)
 
-        ​	==重启order==
+      ​	==重启order==
 
-        测试:
+      测试:
 
-        ![](.\图片\sentinel的的15.png)
+      ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的15.png)
 
-         
+       
 
-         ==所以,fallback是用于管理异常的,当业务方法发生异常,可以降级到指定方法==
+       ==所以,fallback是用于管理异常的,当业务方法发生异常,可以降级到指定方法==
 
-        ​			注意,我们这里==并没有使用sentinel配置任何规则==,但是却降级成功,就是因为
+      ​			注意,我们这里==并没有使用sentinel配置任何规则==,但是却降级成功,就是因为
 
-        ​			fallback是用于管理异常的,当业务方法发生异常,可以降级到指定方法==
+      ​			fallback是用于管理异常的,当业务方法发生异常,可以降级到指定方法==
 
-        
+      
 
-    7.   **==为业务方法添加blockHandler,看看是什么效果==**
+   7. **==为业务方法添加blockHandler,看看是什么效果==**
 
-         ![](.\图片\sentinel的的16.png)
+      ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的16.png)
 
-         **重启84,访问业务方法:**
+      **重启84,访问业务方法:**
 
-        ![](.\图片\sentinel的的17.png)
+      ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的17.png)
 
-         可以看到.,直接报错了,并没有降级
+       可以看到.,直接报错了,并没有降级
 
-        ​				也就是说,blockHandler==只对sentienl定义的规则降级==
+      ​				也就是说,blockHandler==只对sentienl定义的规则降级==
 
-         
+       
 
-    8.   **==如果fallback和blockHandler都配置呢?==**]
+   8. **==如果fallback和blockHandler都配置呢?==**]
 
-         ![](.\图片\sentinel的的18.png)
+      ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的18.png)
 
-         **设置qps规则,阈值1**
+      **设置qps规则,阈值1**
 
-         ![](.\图片\sentinel的的19.png)
+      ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的19.png)
 
-         ==测试:==
+      ==测试:==
 
-        ![](.\图片\sentinel的的20.png)
+      ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的20.png)
 
-         
+       
 
-         可以看到,当两个都同时生效时,==blockhandler优先生效==
+       可以看到,当两个都同时生效时,==blockhandler优先生效==
 
-    9.  **==@SentinelResource还有一个属性,exceptionsToIgnore==**
+   9. **==@SentinelResource还有一个属性,exceptionsToIgnore==**
 
-         ![](.\图片\sentinel的的21.png)
+       ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的21.png)
 
-         **exceptionsToIgnore指定一个异常类,**
+       **exceptionsToIgnore指定一个异常类,**
 
-        ​					**表示如果当前方法抛出的是指定的异常,不降级,直接对用户抛出异常**
+      ​					**表示如果当前方法抛出的是指定的异常,不降级,直接对用户抛出异常**
 
-         ![](.\图片\sentinel的的22.png)
+       ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的22.png)
 
-         
+       
 
-         
+       
 
-    
+   
 
 
 
@@ -3718,51 +3718,51 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 
 
-1.  修改84模块,使其支持feign
+1. 修改84模块,使其支持feign
 
-    1.  pom
+   1. pom
 
-        ![](.\图片\sentinel的的23.png)
+      ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的23.png)
 
-    2.  配置文件
+   2. 配置文件
 
-        ![](.\图片\sentinel的的24.png)
+      ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的24.png)
 
-    3.  主启动类,也要修改
+   3. 主启动类,也要修改
 
-        ![](.\图片\sentinel的的25.png)
+      ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的25.png)
 
-    4.  创建远程调用pay模块的接口
+   4. 创建远程调用pay模块的接口
 
-        ![](.\图片\sentinel的的26.png)
+      ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的26.png)
 
-    5.  创建这个接口的实现类,用于降级
+   5. 创建这个接口的实现类,用于降级
 
-        ![](.\图片\sentinel的的27.png)
+      ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的27.png)
 
-    6.   再次修改接口,指定降级类
+   6. 再次修改接口,指定降级类
 
-        ![](.\图片\sentinel的的28.png)
+      ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的28.png)
 
-    7.   controller添加远程调用
+   7. controller添加远程调用
 
-        ![](.\图片\sentinel的的29.png)
+      ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的29.png)
 
-    8.  测试
+   8. 测试
 
-        启动9003,84
+      启动9003,84
 
-    9.   测试,如果关闭9003.看看84会不会降级
+   9. 测试,如果关闭9003.看看84会不会降级
 
-        ![](.\图片\sentinel的的30.png)
+      ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的30.png)
 
-        **可以看到,正常降级了**
+      **可以看到,正常降级了**
 
-        
+      
 
 **熔断框架比较**
 
-![](.\图片\sentinel的的31.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的31.png)
 
 
 
@@ -3776,65 +3776,65 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 默认规则是临时存储的,重启sentinel就会消失
 
-![](.\图片\sentinel的的32.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的32.png)
 
 **这里以之前的8401为案例进行修改:**
 
-1.  修改8401的pom
+1. 修改8401的pom
 
-    ```xml
-    添加:
-    <!-- SpringCloud ailibaba sentinel-datasource-nacos 持久化需要用到-->
-    <dependency>
-        <groupId>com.alibaba.csp</groupId>
-        <artifactId>sentinel-datasource-nacos</artifactId>
-    </dependency>
-     
-    ```
+   ```xml
+   添加:
+   <!-- SpringCloud ailibaba sentinel-datasource-nacos 持久化需要用到-->
+   <dependency>
+       <groupId>com.alibaba.csp</groupId>
+       <artifactId>sentinel-datasource-nacos</artifactId>
+   </dependency>
+    
+   ```
+
+   
+
+2. 修改配置文件:
+
+   添加:
+
+    ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的33.png)
+
+    **实际上就是指定,我们的规则要保证在哪个名称空间的哪个分组下**
+
+    			这里没有指定namespace, 但是是可以指定的
+
+   ​			**注意,这里的dataid要与8401的服务名一致**
+
+3. **在nacos中创建一个配置文件,dataId就是上面配置文件中指定的**
+
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的34.png)
+
+   ==json中,这些属性的含义:==
+
+   ​	![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的35.png)
 
     
 
-2.   修改配置文件:
+   
 
-    添加:
+4. 启动8401:
 
-     ![](.\图片\sentinel的的33.png)
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的36.png)
 
-     **实际上就是指定,我们的规则要保证在哪个名称空间的哪个分组下**
+   可以看到,直接读取到了规则
 
-     			这里没有指定namespace, 但是是可以指定的
+5. 关闭8401
 
-    ​			**注意,这里的dataid要与8401的服务名一致**
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的37.png)
 
-3.   **在nacos中创建一个配置文件,dataId就是上面配置文件中指定的**
+6. 此时重启8401,如果sentinel又可以正常读取到规则,那么证明持久化成功
 
-     ![](.\图片\sentinel的的34.png)
+   可以看到,又重新出现了
 
-     ==json中,这些属性的含义:==
+    ![](C:/Users/Administrator/Desktop/新建文件夹/图片/sentinel的的38.png)
 
-    ​	![](.\图片\sentinel的的35.png)
-
-     
-
-    
-
-4.   启动8401:
-
-     ![](.\图片\sentinel的的36.png)
-
-     可以看到,直接读取到了规则
-
-5.   关闭8401
-
-    ![](.\图片\sentinel的的37.png)
-
-6.   此时重启8401,如果sentinel又可以正常读取到规则,那么证明持久化成功
-
-    可以看到,又重新出现了
-
-     ![](.\图片\sentinel的的38.png)
-
-    
+   
 
 
 
@@ -3864,11 +3864,11 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 **分布式事务中的一些概念,也是seata中的概念:**
 
-​		![](.\图片\seala.png)
+​		![](C:/Users/Administrator/Desktop/新建文件夹/图片/seala.png)
 
-![](.\图片\seala的2.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/seala的2.png)
 
-![](.\图片\seala的3.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/seala的3.png)
 
 
 
@@ -3876,656 +3876,654 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 ### seata安装:
 
-1.  **下载安装seata的安装包**
+1. **下载安装seata的安装包**
 
-2.  **修改file.conf**
+2. **修改file.conf**
 
-     ![](.\图片\seala的4.png)
+    ![](C:/Users/Administrator/Desktop/新建文件夹/图片/seala的4.png)
 
-     ![](.\图片\seala的5.png)
+    ![](C:/Users/Administrator/Desktop/新建文件夹/图片/seala的5.png)
 
-     ![](.\图片\seala的6.png)
+    ![](C:/Users/Administrator/Desktop/新建文件夹/图片/seala的6.png)
 
-3.   **mysql建库建表**
+3. **mysql建库建表**
 
-     1,上面指定了数据库为seata,所以创建一个数据库名为seata
+   1,上面指定了数据库为seata,所以创建一个数据库名为seata
 
-     2,建表,在seata的安装目录下有一个db_store.sql,运行即可
+   2,建表,在seata的安装目录下有一个db_store.sql,运行即可
 
-4.   **继续修改配置文件,修改registry.conf**
+4. **继续修改配置文件,修改registry.conf**
 
-    配置seata作为微服务,指定注册中心
+   配置seata作为微服务,指定注册中心
 
-    ![](.\图片\seala的7.png)
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/seala的7.png)
 
-5.   启动
+5. 启动
 
-    先启动nacos
+   先启动nacos
 
-    在启动seata-server(运行安装目录下的,seata-server.bat)
+   在启动seata-server(运行安装目录下的,seata-server.bat)
 
-    
+   
 
 **业务说明**
 
-![](.\图片\seala的8.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/seala的8.png)
 
 下单--->库存--->账号余额
 
 
 
-1.  创建三个数据库
+1. 创建三个数据库
 
-    ![](.\图片\seala的9.png)
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/seala的9.png)
 
-2.   创建对应的表
+2. 创建对应的表
 
-    ![](.\图片\seala的10.png)
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/seala的10.png)
 
-3.   创建回滚日志表,方便查看
+3. 创建回滚日志表,方便查看
 
-    ![](.\图片\seala的11.png)
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/seala的11.png)
 
-    **注意==每个库都要执行一次==这个sql,生成回滚日志表**
+   **注意==每个库都要执行一次==这个sql,生成回滚日志表**
 
-4.   ==每个业务都创建一个微服务,也就是要有三个微服务,订单,库存,账号==
+4. ==每个业务都创建一个微服务,也就是要有三个微服务,订单,库存,账号==
 
-    ​     ==订单==,seta-order-2001
+   ​     ==订单==,seta-order-2001
 
-    1.   pom
+   1. pom
 
-    2.   配置文件
+   2. 配置文件
 
-        ```yaml
-        server:
-          port: 2001
-        
-        spring:
-          application:
-            name: seata-order-service
-          cloud:
-            alibaba:
-              seata:
-                # 自定义事务组名称需要与seata-server中的对应,我们之前在seata的配置文件中配置的名字
-                tx-service-group: fsp_tx_group
-            nacos:
-              discovery:
-                server-addr: 127.0.0.1:8848
-          datasource:
-            # 当前数据源操作类型
-            type: com.alibaba.druid.pool.DruidDataSource
-            # mysql驱动类
-            driver-class-name: com.mysql.cj.jdbc.Driver
-            url: jdbc:mysql://localhost:3306/seata_order?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8
-            username: root
-            password: root
-        feign:
-          hystrix:
-            enabled: false
-        logging:
-          level:
-            io:
-              seata: info
-        
-        mybatis:
-          mapperLocations: classpath*:mapper/*.xml
-        
-         
-         
-        
-        ```
+      ```yaml
+      server:
+        port: 2001
+      
+      spring:
+        application:
+          name: seata-order-service
+        cloud:
+          alibaba:
+            seata:
+              # 自定义事务组名称需要与seata-server中的对应,我们之前在seata的配置文件中配置的名字
+              tx-service-group: fsp_tx_group
+          nacos:
+            discovery:
+              server-addr: 127.0.0.1:8848
+        datasource:
+          # 当前数据源操作类型
+          type: com.alibaba.druid.pool.DruidDataSource
+          # mysql驱动类
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://localhost:3306/seata_order?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8
+          username: root
+          password: root
+      feign:
+        hystrix:
+          enabled: false
+      logging:
+        level:
+          io:
+            seata: info
+      
+      mybatis:
+        mapperLocations: classpath*:mapper/*.xml
+      
+       
+       
+      
+      ```
 
-        还要额外创建其他配置文件,创建一个file.conf:
+      还要额外创建其他配置文件,创建一个file.conf:
 
-         ```.conf
-        transport {
-          # tcp udt unix-domain-socket
-          type = "TCP"
-          #NIO NATIVE
-          server = "NIO"
-          #enable heartbeat
-          heartbeat = true
-          #thread factory for netty
-          thread-factory {
-            boss-thread-prefix = "NettyBoss"
-            worker-thread-prefix = "NettyServerNIOWorker"
-            server-executor-thread-prefix = "NettyServerBizHandler"
-            share-boss-worker = false
-            client-selector-thread-prefix = "NettyClientSelector"
-            client-selector-thread-size = 1
-            client-worker-thread-prefix = "NettyClientWorkerThread"
-            # netty boss thread size,will not be used for UDT
-            boss-thread-size = 1
-            #auto default pin or 8
-            worker-thread-size = 8
-          }
-          shutdown {
-            # when destroy server, wait seconds
-            wait = 3
-          }
-          serialization = "seata"
-          compressor = "none"
+       ```.conf
+      transport {
+        # tcp udt unix-domain-socket
+        type = "TCP"
+        #NIO NATIVE
+        server = "NIO"
+        #enable heartbeat
+        heartbeat = true
+        #thread factory for netty
+        thread-factory {
+          boss-thread-prefix = "NettyBoss"
+          worker-thread-prefix = "NettyServerNIOWorker"
+          server-executor-thread-prefix = "NettyServerBizHandler"
+          share-boss-worker = false
+          client-selector-thread-prefix = "NettyClientSelector"
+          client-selector-thread-size = 1
+          client-worker-thread-prefix = "NettyClientWorkerThread"
+          # netty boss thread size,will not be used for UDT
+          boss-thread-size = 1
+          #auto default pin or 8
+          worker-thread-size = 8
         }
-        service {
-          #vgroup->rgroup
-          # 事务组名称
-          vgroup_mapping.fsp_tx_group = "default"
-          #only support single node
-          default.grouplist = "127.0.0.1:8091"
-          #degrade current not support
-          enableDegrade = false
-          #disable
-          disable = false
-          #unit ms,s,m,h,d represents milliseconds, seconds, minutes, hours, days, default permanent
-          max.commit.retry.timeout = "-1"
-          max.rollback.retry.timeout = "-1"
+        shutdown {
+          # when destroy server, wait seconds
+          wait = 3
         }
-         
-        client {
-          async.commit.buffer.limit = 10000
-          lock {
-            retry.internal = 10
-            retry.times = 30
-          }
-          report.retry.count = 5
-          tm.commit.retry.count = 1
-          tm.rollback.retry.count = 1
-        }
-         
-        ## transaction log store
-        store {
-          ## store mode: file、db
-          #mode = "file"
-          mode = "db"
-         
-          ## file store
-          file {
-            dir = "sessionStore"
-         
-            # branch session size , if exceeded first try compress lockkey, still exceeded throws exceptions
-            max-branch-session-size = 16384
-            # globe session size , if exceeded throws exceptions
-            max-global-session-size = 512
-            # file buffer size , if exceeded allocate new buffer
-            file-write-buffer-cache-size = 16384
-            # when recover batch read size
-            session.reload.read_size = 100
-            # async, sync
-            flush-disk-mode = async
-          }
-         
-          ## database store
-          db {
-            ## the implement of javax.sql.DataSource, such as DruidDataSource(druid)/BasicDataSource(dbcp) etc.
-            datasource = "dbcp"
-            ## mysql/oracle/h2/oceanbase etc.
-            db-type = "mysql"
-            driver-class-name = "com.mysql.jdbc.Driver"
-            url = "jdbc:mysql://127.0.0.1:3306/seata"
-            user = "root"
-            password = "root"
-            min-conn = 1
-            max-conn = 3
-            global.table = "global_table"
-            branch.table = "branch_table"
-            lock-table = "lock_table"
-            query-limit = 100
-          }
-        }
+        serialization = "seata"
+        compressor = "none"
+      }
+      service {
+        #vgroup->rgroup
+        # 事务组名称
+        vgroup_mapping.fsp_tx_group = "default"
+        #only support single node
+        default.grouplist = "127.0.0.1:8091"
+        #degrade current not support
+        enableDegrade = false
+        #disable
+        disable = false
+        #unit ms,s,m,h,d represents milliseconds, seconds, minutes, hours, days, default permanent
+        max.commit.retry.timeout = "-1"
+        max.rollback.retry.timeout = "-1"
+      }
+       
+      client {
+        async.commit.buffer.limit = 10000
         lock {
-          ## the lock store mode: local、remote
-          mode = "remote"
-         
-          local {
-            ## store locks in user's database
-          }
-         
-          remote {
-            ## store locks in the seata's server
-          }
+          retry.internal = 10
+          retry.times = 30
         }
-        recovery {
-          #schedule committing retry period in milliseconds
-          committing-retry-period = 1000
-          #schedule asyn committing retry period in milliseconds
-          asyn-committing-retry-period = 1000
-          #schedule rollbacking retry period in milliseconds
-          rollbacking-retry-period = 1000
-          #schedule timeout retry period in milliseconds
-          timeout-retry-period = 1000
+        report.retry.count = 5
+        tm.commit.retry.count = 1
+        tm.rollback.retry.count = 1
+      }
+       
+      ## transaction log store
+      store {
+        ## store mode: file、db
+        #mode = "file"
+        mode = "db"
+       
+        ## file store
+        file {
+          dir = "sessionStore"
+       
+          # branch session size , if exceeded first try compress lockkey, still exceeded throws exceptions
+          max-branch-session-size = 16384
+          # globe session size , if exceeded throws exceptions
+          max-global-session-size = 512
+          # file buffer size , if exceeded allocate new buffer
+          file-write-buffer-cache-size = 16384
+          # when recover batch read size
+          session.reload.read_size = 100
+          # async, sync
+          flush-disk-mode = async
         }
-         
-        transaction {
-          undo.data.validation = true
-          undo.log.serialization = "jackson"
-          undo.log.save.days = 7
-          #schedule delete expired undo_log in milliseconds
-          undo.log.delete.period = 86400000
-          undo.log.table = "undo_log"
+       
+        ## database store
+        db {
+          ## the implement of javax.sql.DataSource, such as DruidDataSource(druid)/BasicDataSource(dbcp) etc.
+          datasource = "dbcp"
+          ## mysql/oracle/h2/oceanbase etc.
+          db-type = "mysql"
+          driver-class-name = "com.mysql.jdbc.Driver"
+          url = "jdbc:mysql://127.0.0.1:3306/seata"
+          user = "root"
+          password = "root"
+          min-conn = 1
+          max-conn = 3
+          global.table = "global_table"
+          branch.table = "branch_table"
+          lock-table = "lock_table"
+          query-limit = 100
         }
-         
-        ## metrics settings
-        metrics {
-          enabled = false
-          registry-type = "compact"
-          # multi exporters use comma divided
-          exporter-list = "prometheus"
-          exporter-prometheus-port = 9898
+      }
+      lock {
+        ## the lock store mode: local、remote
+        mode = "remote"
+       
+        local {
+          ## store locks in user's database
         }
-         
-        support {
-          ## spring
-          spring {
-            # auto proxy the DataSource bean
-            datasource.autoproxy = false
+       
+        remote {
+          ## store locks in the seata's server
+        }
+      }
+      recovery {
+        #schedule committing retry period in milliseconds
+        committing-retry-period = 1000
+        #schedule asyn committing retry period in milliseconds
+        asyn-committing-retry-period = 1000
+        #schedule rollbacking retry period in milliseconds
+        rollbacking-retry-period = 1000
+        #schedule timeout retry period in milliseconds
+        timeout-retry-period = 1000
+      }
+       
+      transaction {
+        undo.data.validation = true
+        undo.log.serialization = "jackson"
+        undo.log.save.days = 7
+        #schedule delete expired undo_log in milliseconds
+        undo.log.delete.period = 86400000
+        undo.log.table = "undo_log"
+      }
+       
+      ## metrics settings
+      metrics {
+        enabled = false
+        registry-type = "compact"
+        # multi exporters use comma divided
+        exporter-list = "prometheus"
+        exporter-prometheus-port = 9898
+      }
+       
+      support {
+        ## spring
+        spring {
+          # auto proxy the DataSource bean
+          datasource.autoproxy = false
+        }
+      }
+      
+       ```
+
+      创建registry.conf:
+
+      ```conf
+      registry {
+        # file 、nacos 、eureka、redis、zk、consul、etcd3、sofa
+        type = "nacos"
+       
+        nacos {
+          #serverAddr = "localhost"
+          serverAddr = "localhost:8848"
+          namespace = ""
+          cluster = "default"
+        }
+        eureka {
+          serviceUrl = "http://localhost:8761/eureka"
+          application = "default"
+          weight = "1"
+        }
+        redis {
+          serverAddr = "localhost:6379"
+          db = "0"
+        }
+        zk {
+          cluster = "default"
+          serverAddr = "127.0.0.1:2181"
+          session.timeout = 6000
+          connect.timeout = 2000
+        }
+        consul {
+          cluster = "default"
+          serverAddr = "127.0.0.1:8500"
+        }
+        etcd3 {
+          cluster = "default"
+          serverAddr = "http://localhost:2379"
+        }
+        sofa {
+          serverAddr = "127.0.0.1:9603"
+          application = "default"
+          region = "DEFAULT_ZONE"
+          datacenter = "DefaultDataCenter"
+          cluster = "default"
+          group = "SEATA_GROUP"
+          addressWaitTime = "3000"
+        }
+        file {
+          name = "file.conf"
+        }
+      }
+       
+      config {
+        # file、nacos 、apollo、zk、consul、etcd3
+        type = "file"
+       
+        nacos {
+          serverAddr = "localhost"
+          namespace = ""
+        }
+        consul {
+          serverAddr = "127.0.0.1:8500"
+        }
+        apollo {
+          app.id = "seata-server"
+          apollo.meta = "http://192.168.1.204:8801"
+        }
+        zk {
+          serverAddr = "127.0.0.1:2181"
+          session.timeout = 6000
+          connect.timeout = 2000
+        }
+        etcd3 {
+          serverAddr = "http://localhost:2379"
+        }
+        file {
+          name = "file.conf"
+        }
+      }
+      
+      ```
+
+      ==实际上,就是要将seata中的我们之前修改的两个配置文件复制到这个项目下==
+
+   3. **主启动类**
+
+      ```java
+      @SpringBootApplication(exclude = DataSourceAutoConfiguration.class) //取消数据源的自动创建
+      @EnableDiscoveryClient
+      @EnableFeignClients
+      public class SeataOrderMain2001 {
+      
+          public static void main(String[] args) {
+              SpringApplication.run(SeataOrderMain2001.class,args);
           }
-        }
-        
-         ```
+      }
+      ```
 
-        创建registry.conf:
+      
 
-        ```conf
-        registry {
-          # file 、nacos 、eureka、redis、zk、consul、etcd3、sofa
-          type = "nacos"
-         
-          nacos {
-            #serverAddr = "localhost"
-            serverAddr = "localhost:8848"
-            namespace = ""
-            cluster = "default"
+   4. **service层**
+
+      ```xml
+      public interface OrderService {
+      
+          /**
+           * 创建订单
+           * @param order
+           */
+          void create(Order order);
+      }
+      ```
+
+      ```xml
+      @FeignClient(value = "seata-storage-service")
+      public interface StorageService {
+      
+          /**
+           * 减库存
+           * @param productId
+           * @param count
+           * @return
+           */
+          @PostMapping(value = "/storage/decrease")
+          CommonResult decrease(@RequestParam("productId") Long productId, @RequestParam("count") Integer count);
+      }
+      ```
+
+      ```xml
+      @FeignClient(value = "seata-account-service")
+      public interface AccountService {
+      
+          /**
+           * 减余额
+           * @param userId
+           * @param money
+           * @return
+           */
+          @PostMapping(value = "/account/decrease")
+          CommonResult decrease(@RequestParam("userId") Long userId, @RequestParam("money") BigDecimal money);
+      }
+       
+       
+      
+      ```
+
+      ```xml
+      @Service
+      @Slf4j
+      public class OrderServiceImpl implements OrderService {
+      
+          @Resource
+          private OrderDao orderDao;
+          @Resource
+          private AccountService accountService;
+          @Resource
+          private StorageService storageService;
+      
+          /**
+           * 创建订单->调用库存服务扣减库存->调用账户服务扣减账户余额->修改订单状态
+           * 简单说:
+           * 下订单->减库存->减余额->改状态
+           * GlobalTransactional seata开启分布式事务,异常时回滚,name保证唯一即可
+           * @param order 订单对象
+           */
+          @Override
+          ///@GlobalTransactional(name = "fsp-create-order", rollbackFor = Exception.class)
+          public void create(Order order) {
+              // 1 新建订单
+              log.info("----->开始新建订单");
+              orderDao.create(order);
+      
+              // 2 扣减库存
+              log.info("----->订单微服务开始调用库存,做扣减Count");
+              storageService.decrease(order.getProductId(), order.getCount());
+              log.info("----->订单微服务开始调用库存,做扣减End");
+      
+              // 3 扣减账户
+              log.info("----->订单微服务开始调用账户,做扣减Money");
+              accountService.decrease(order.getUserId(), order.getMoney());
+              log.info("----->订单微服务开始调用账户,做扣减End");
+      
+              // 4 修改订单状态,从0到1,1代表已完成
+              log.info("----->修改订单状态开始");
+              orderDao.update(order.getUserId(), 0);
+      
+              log.info("----->下订单结束了,O(∩_∩)O哈哈~");
           }
-          eureka {
-            serviceUrl = "http://localhost:8761/eureka"
-            application = "default"
-            weight = "1"
+      }
+      ```
+
+      
+
+       
+
+       
+
+       
+
+       
+
+       
+
+       
+
+   5. **dao层,也就是接口**
+
+      ```java
+      @Mapper
+      public interface OrderDao {
+          /**
+           * 1 新建订单
+           * @param order
+           * @return
+           */
+          int create(Order order);
+      
+          /**
+           * 2 修改订单状态,从0改为1
+           * @param userId
+           * @param status
+           * @return
+           */
+          int update(@Param("userId") Long userId, @Param("status") Integer status);
+      }
+      ```
+
+       ==在resource下创建mapper文件夹,编写mapper.xml==
+
+      ```xml
+      <?xml version="1.0" encoding="UTF-8" ?>
+      <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+              "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+      <mapper namespace="com.eiletxie.springcloud.alibaba.dao.OrderDao">
+      
+          <resultMap id="BaseResultMap" type="com.eiletxie.springcloud.alibaba.domain.Order">
+              <id column="id" property="id" jdbcType="BIGINT"></id>
+              <result column="user_id" property="userId" jdbcType="BIGINT"></result>
+              <result column="product_id" property="productId" jdbcType="BIGINT"></result>
+              <result column="count" property="count" jdbcType="INTEGER"></result>
+              <result column="money" property="money" jdbcType="DECIMAL"></result>
+              <result column="status" property="status" jdbcType="INTEGER"></result>
+          </resultMap>
+      
+          <insert id="create" parameterType="com.eiletxie.springcloud.alibaba.domain.Order" useGeneratedKeys="true"
+                  keyProperty="id">
+              insert into t_order(user_id,product_id,count,money,status) values (#{userId},#{productId},#{count},#{money},0);
+          </insert>
+      
+          <update id="update">
+              update t_order set status =1 where user_id =#{userId} and status=#{status};
+         </update>
+      </mapper>
+       
+      ```
+
+   6. **controller层**
+
+      ```java
+      @RestController
+      public class OrderController {
+          @Resource
+          private OrderService orderService;
+      
+      
+          /**
+           * 创建订单
+           *
+           * @param order
+           * @return
+           */
+          @GetMapping("/order/create")
+          public CommonResult create(Order order) {
+              orderService.create(order);
+              return new CommonResult(200, "订单创建成功");
           }
-          redis {
-            serverAddr = "localhost:6379"
-            db = "0"
+      
+      
+      }
+      ```
+
+      
+
+   7. **entity类(也叫domain类)**
+
+      ```java
+      @Data
+      @AllArgsConstructor
+      @NoArgsConstructor
+      public class CommonResult<T> {
+          private Integer code;
+          private String message;
+          private T data;
+      
+          public CommonResult(Integer code, String message) {
+              this(code, message, null);
           }
-          zk {
-            cluster = "default"
-            serverAddr = "127.0.0.1:2181"
-            session.timeout = 6000
-            connect.timeout = 2000
+      }
+       
+      ```
+
+      ![](C:/Users/Administrator/Desktop/新建文件夹/图片/seala的12.png)
+
+       
+
+       
+
+      
+
+   8. config配置类
+
+      ```java
+      @Configuration
+      @MapperScan({"com.eiletxie.springcloud.alibaba.dao"})		指定我们的接口的位置
+      public class MyBatisConfig {
+      
+      
+      }
+       
+       
+      
+      ```
+
+      ```java
+      /**
+       * @Author EiletXie
+       * @Since 2020/3/18 21:51
+       * 使用Seata对数据源进行代理
+       */
+      @Configuration
+      public class DataSourceProxyConfig {
+      
+          @Value("${mybatis.mapperLocations}")
+          private String mapperLocations;
+      
+          @Bean
+          @ConfigurationProperties(prefix = "spring.datasource")
+          public DataSource druidDataSource() {
+              return new DruidDataSource();
           }
-          consul {
-            cluster = "default"
-            serverAddr = "127.0.0.1:8500"
+      
+          @Bean
+          public DataSourceProxy dataSourceProxy(DataSource druidDataSource) {
+              return new DataSourceProxy(druidDataSource);
           }
-          etcd3 {
-            cluster = "default"
-            serverAddr = "http://localhost:2379"
+      
+          @Bean
+          public SqlSessionFactory sqlSessionFactoryBean(DataSourceProxy dataSourceProxy) throws Exception {
+              SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
+              bean.setDataSource(dataSourceProxy);
+              ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
+              bean.setMapperLocations(resolver.getResources(mapperLocations));
+              return bean.getObject();
           }
-          sofa {
-            serverAddr = "127.0.0.1:9603"
-            application = "default"
-            region = "DEFAULT_ZONE"
-            datacenter = "DefaultDataCenter"
-            cluster = "default"
-            group = "SEATA_GROUP"
-            addressWaitTime = "3000"
-          }
-          file {
-            name = "file.conf"
-          }
-        }
-         
-        config {
-          # file、nacos 、apollo、zk、consul、etcd3
-          type = "file"
-         
-          nacos {
-            serverAddr = "localhost"
-            namespace = ""
-          }
-          consul {
-            serverAddr = "127.0.0.1:8500"
-          }
-          apollo {
-            app.id = "seata-server"
-            apollo.meta = "http://192.168.1.204:8801"
-          }
-          zk {
-            serverAddr = "127.0.0.1:2181"
-            session.timeout = 6000
-            connect.timeout = 2000
-          }
-          etcd3 {
-            serverAddr = "http://localhost:2379"
-          }
-          file {
-            name = "file.conf"
-          }
-        }
-        
-        ```
+      }
+       
+       
+      
+      ```
 
-        ==实际上,就是要将seata中的我们之前修改的两个配置文件复制到这个项目下==
+      
 
-    3.   **主启动类**
+   9. 
 
-        ```java
-        @SpringBootApplication(exclude = DataSourceAutoConfiguration.class) //取消数据源的自动创建
-        @EnableDiscoveryClient
-        @EnableFeignClients
-        public class SeataOrderMain2001 {
-        
-            public static void main(String[] args) {
-                SpringApplication.run(SeataOrderMain2001.class,args);
-            }
-        }
-        ```
+   10. 
 
-        
+   11. 
 
-    4.   **service层**
+     ==库存==,seta-storage-2002
 
-         ```xml
-        public interface OrderService {
-        
-            /**
-             * 创建订单
-             * @param order
-             */
-            void create(Order order);
-        }
-        ```
+   **==看脑图==**
 
-        ```xml
-        @FeignClient(value = "seata-storage-service")
-        public interface StorageService {
-        
-            /**
-             * 减库存
-             * @param productId
-             * @param count
-             * @return
-             */
-            @PostMapping(value = "/storage/decrease")
-            CommonResult decrease(@RequestParam("productId") Long productId, @RequestParam("count") Integer count);
-        }
-        ```
+   1.    pom   
+   2.    配置文件
+   3.    主启动类
+   4.    service层
+   5.    dao层
+   6.    controller层
+   7.    
+   8.    
 
-        ```xml
-        @FeignClient(value = "seata-account-service")
-        public interface AccountService {
-        
-            /**
-             * 减余额
-             * @param userId
-             * @param money
-             * @return
-             */
-            @PostMapping(value = "/account/decrease")
-            CommonResult decrease(@RequestParam("userId") Long userId, @RequestParam("money") BigDecimal money);
-        }
-         
-         
-        
-        ```
+    
 
-        ```xml
-        @Service
-        @Slf4j
-        public class OrderServiceImpl implements OrderService {
-        
-            @Resource
-            private OrderDao orderDao;
-            @Resource
-            private AccountService accountService;
-            @Resource
-            private StorageService storageService;
-        
-            /**
-             * 创建订单->调用库存服务扣减库存->调用账户服务扣减账户余额->修改订单状态
-             * 简单说:
-             * 下订单->减库存->减余额->改状态
-             * GlobalTransactional seata开启分布式事务,异常时回滚,name保证唯一即可
-             * @param order 订单对象
-             */
-            @Override
-            ///@GlobalTransactional(name = "fsp-create-order", rollbackFor = Exception.class)
-            public void create(Order order) {
-                // 1 新建订单
-                log.info("----->开始新建订单");
-                orderDao.create(order);
-        
-                // 2 扣减库存
-                log.info("----->订单微服务开始调用库存,做扣减Count");
-                storageService.decrease(order.getProductId(), order.getCount());
-                log.info("----->订单微服务开始调用库存,做扣减End");
-        
-                // 3 扣减账户
-                log.info("----->订单微服务开始调用账户,做扣减Money");
-                accountService.decrease(order.getUserId(), order.getMoney());
-                log.info("----->订单微服务开始调用账户,做扣减End");
-        
-                // 4 修改订单状态,从0到1,1代表已完成
-                log.info("----->修改订单状态开始");
-                orderDao.update(order.getUserId(), 0);
-        
-                log.info("----->下订单结束了,O(∩_∩)O哈哈~");
-            }
-        }
-        ```
+    ==账号==,seta-account-2003
 
-        
+   **==看脑图==**
 
-         
+   1.    pom     
+   2.    配置文件
+   3.    主启动类
+   4.    service层
+   5.    dao层
+   6.    controller层
+   7.    
+   8.    
 
-         
+5. **全局创建完成后,首先测试不加seata**
 
-         
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/seala的14.png)
 
-         
+   
 
-         
-
-         
-
-    5.   **dao层,也就是接口**
-
-        ```java
-        @Mapper
-        public interface OrderDao {
-            /**
-             * 1 新建订单
-             * @param order
-             * @return
-             */
-            int create(Order order);
-        
-            /**
-             * 2 修改订单状态,从0改为1
-             * @param userId
-             * @param status
-             * @return
-             */
-            int update(@Param("userId") Long userId, @Param("status") Integer status);
-        }
-        ```
-
-         ==在resource下创建mapper文件夹,编写mapper.xml==
-
-        ```xml
-        <?xml version="1.0" encoding="UTF-8" ?>
-        <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-                "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-        <mapper namespace="com.eiletxie.springcloud.alibaba.dao.OrderDao">
-        
-            <resultMap id="BaseResultMap" type="com.eiletxie.springcloud.alibaba.domain.Order">
-                <id column="id" property="id" jdbcType="BIGINT"></id>
-                <result column="user_id" property="userId" jdbcType="BIGINT"></result>
-                <result column="product_id" property="productId" jdbcType="BIGINT"></result>
-                <result column="count" property="count" jdbcType="INTEGER"></result>
-                <result column="money" property="money" jdbcType="DECIMAL"></result>
-                <result column="status" property="status" jdbcType="INTEGER"></result>
-            </resultMap>
-        
-            <insert id="create" parameterType="com.eiletxie.springcloud.alibaba.domain.Order" useGeneratedKeys="true"
-                    keyProperty="id">
-                insert into t_order(user_id,product_id,count,money,status) values (#{userId},#{productId},#{count},#{money},0);
-            </insert>
-        
-            <update id="update">
-                update t_order set status =1 where user_id =#{userId} and status=#{status};
-           </update>
-        </mapper>
-         
-        ```
-
-    6.   **controller层**
-
-        ```java
-        @RestController
-        public class OrderController {
-            @Resource
-            private OrderService orderService;
-        
-        
-            /**
-             * 创建订单
-             *
-             * @param order
-             * @return
-             */
-            @GetMapping("/order/create")
-            public CommonResult create(Order order) {
-                orderService.create(order);
-                return new CommonResult(200, "订单创建成功");
-            }
-        
-        
-        }
-        ```
-
-        
-
-    7.   **entity类(也叫domain类)**
-
-         ```java
-        @Data
-        @AllArgsConstructor
-        @NoArgsConstructor
-        public class CommonResult<T> {
-            private Integer code;
-            private String message;
-            private T data;
-        
-            public CommonResult(Integer code, String message) {
-                this(code, message, null);
-            }
-        }
-         
-        ```
-
-        ![](.\图片\seala的12.png)
-
-         
-
-         
-
-        
-
-    8.   config配置类
-
-        ```java
-        @Configuration
-        @MapperScan({"com.eiletxie.springcloud.alibaba.dao"})		指定我们的接口的位置
-        public class MyBatisConfig {
-        
-        
-        }
-         
-         
-        
-        ```
-
-        ```java
-        
-        
-        /**
-         * @Author EiletXie
-         * @Since 2020/3/18 21:51
-         * 使用Seata对数据源进行代理
-         */
-        @Configuration
-        public class DataSourceProxyConfig {
-        
-            @Value("${mybatis.mapperLocations}")
-            private String mapperLocations;
-        
-            @Bean
-            @ConfigurationProperties(prefix = "spring.datasource")
-            public DataSource druidDataSource() {
-                return new DruidDataSource();
-            }
-        
-            @Bean
-            public DataSourceProxy dataSourceProxy(DataSource druidDataSource) {
-                return new DataSourceProxy(druidDataSource);
-            }
-        
-            @Bean
-            public SqlSessionFactory sqlSessionFactoryBean(DataSourceProxy dataSourceProxy) throws Exception {
-                SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
-                bean.setDataSource(dataSourceProxy);
-                ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-                bean.setMapperLocations(resolver.getResources(mapperLocations));
-                return bean.getObject();
-            }
-        }
-         
-         
-        
-        ```
-
-        
-
-    9.   
-
-    10.   
-
-    11.  
-
-      ==库存==,seta-storage-2002
-
-    **==看脑图==**
-
-    1.    pom   
-    2.   配置文件
-    3.   主启动类
-    4.    service层
-    5.    dao层
-    6.    controller层
-    7.   
-    8.   
-
-     
-
-     ==账号==,seta-account-2003
-
-    **==看脑图==**
-
-    1.    pom     
-    2.   配置文件
-    3.   主启动类
-    4.   service层
-    5.    dao层
-    6.   controller层
-    7.   
-    8.   
-
-5.   **全局创建完成后,首先测试不加seata**
-
-     ![](.\图片\seala的14.png)
-
-     
-
-     ![](.\图片\seala的13.png)
+   ![](C:/Users/Administrator/Desktop/新建文件夹/图片/seala的13.png)
 
 ​    
 
@@ -4533,47 +4531,47 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 ​     
 
-6.   使用seata:
+6. 使用seata:
 
-     **在==订单模块==的serviceImpl类中的==create方法==添加启动分布式事务的注解**
+   **在==订单模块==的serviceImpl类中的==create方法==添加启动分布式事务的注解**
 
-     ```java
-    /**
-    	这里添加开启分布式事务的注解,name指定当前全局事务的名称
-    	rollbackFor表示,发生什么异常需要回滚
-    	noRollbackFor:表示,发生什么异常不需要回滚
-    */
-    @GlobalTransactional(name = "fsp-create-order",rollbackFor = Exception.class)
-    ///@GlobalTransactional(name = "fsp-create-order", rollbackFor = Exception.class)
-    public void create(Order order) {
-        // 1 新建订单
-        log.info("----->开始新建订单");
-        orderDao.create(order);
-    
-        // 2 扣减库存
-        log.info("----->订单微服务开始调用库存,做扣减Count");
-        storageService.decrease(order.getProductId(), order.getCount());
-        log.info("----->订单微服务开始调用库存,做扣减End");
-    
-        // 3 扣减账户
-        log.info("----->订单微服务开始调用账户,做扣减Money");
-        accountService.decrease(order.getUserId(), order.getMoney());
-        log.info("----->订单微服务开始调用账户,做扣减End");
-    
-        // 4 修改订单状态,从0到1,1代表已完成
-        log.info("----->修改订单状态开始");
-        orderDao.update(order.getUserId(), 0);
-    
-        log.info("----->下订单结束了,O(∩_∩)O哈哈~");
-    }
-    
-    ```
+   ```java
+   /**
+   	这里添加开启分布式事务的注解,name指定当前全局事务的名称
+   	rollbackFor表示,发生什么异常需要回滚
+   	noRollbackFor:表示,发生什么异常不需要回滚
+   */
+   @GlobalTransactional(name = "fsp-create-order",rollbackFor = Exception.class)
+   ///@GlobalTransactional(name = "fsp-create-order", rollbackFor = Exception.class)
+   public void create(Order order) {
+       // 1 新建订单
+       log.info("----->开始新建订单");
+       orderDao.create(order);
+   
+       // 2 扣减库存
+       log.info("----->订单微服务开始调用库存,做扣减Count");
+       storageService.decrease(order.getProductId(), order.getCount());
+       log.info("----->订单微服务开始调用库存,做扣减End");
+   
+       // 3 扣减账户
+       log.info("----->订单微服务开始调用账户,做扣减Money");
+       accountService.decrease(order.getUserId(), order.getMoney());
+       log.info("----->订单微服务开始调用账户,做扣减End");
+   
+       // 4 修改订单状态,从0到1,1代表已完成
+       log.info("----->修改订单状态开始");
+       orderDao.update(order.getUserId(), 0);
+   
+       log.info("----->下订单结束了,O(∩_∩)O哈哈~");
+   }
+   
+   ```
 
-     
+    
 
-7.   此时在测试
+7. 此时在测试
 
-    发现,发生异常后,直接回滚了,前面的修改操作都回滚了
+   发现,发生异常后,直接回滚了,前面的修改操作都回滚了
 
  
 
@@ -4581,25 +4579,25 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 ### setat原理:
 
-![](.\图片\seala的15.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/seala的15.png)
 
-![](.\图片\seala的16.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/seala的16.png)
 
 
 
 **seata提供了四个模式:**
 
-![](.\图片\seala的17.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/seala的17.png)
 
 
 
-![](.\图片\seala的18.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/seala的18.png)
 
 ==第一阶段:==
 
-![](.\图片\seala的20.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/seala的20.png)
 
-​	![](.\图片\seala的19.png)
+​	![](C:/Users/Administrator/Desktop/新建文件夹/图片/seala的19.png)
 
 
 
@@ -4607,15 +4605,15 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 ==二阶段之提交==:
 
-![](.\图片\seala的21.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/seala的21.png)
 
 
 
 ==二阶段之回滚:==
 
-![](.\图片\seala的22.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/seala的22.png)
 
-![](.\图片\seala的23.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/seala的23.png)
 
 
 
@@ -4625,7 +4623,7 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 ==断点==:
 
-![](.\图片\seala的24.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/seala的24.png)
 
 **可以看到,他们的xid全局事务id是一样的,证明他们在一个事务下**
 
@@ -4633,11 +4631,11 @@ Nacos默认有自带嵌入式数据库,derby,但是如果做集群模式的话,�
 
 
 
-![](.\图片\seala的25.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/seala的25.png)
 
 **before 和 after的原理就是**
 
-![](.\图片\seala的26.png)
+![](C:/Users/Administrator/Desktop/新建文件夹/图片/seala的26.png)
 
 **在更新数据之前,先解析这个更新sql,然后查询要更新的数据,进行保存**
 
