@@ -1,0 +1,4 @@
+top\wfaceboss\myRinbonRule\MySelfRule.class
+top\wfaceboss\springcloud\config\ApplicationContextConfig.class
+top\wfaceboss\springcloud\controller\OrderZKController.class
+top\wfaceboss\springcloud\ZKRibbonConsumerMain8080.class

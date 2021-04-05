@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: openfeign-colony-cloud-eureka-order-service
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka
+ribbon:
+  ReadTimeout:  5000 #建立所连接的时间
+  ConnectTimeout: 5000 #建立连接后从服务器获取可用资源的时间
+
+# open-feign 日志打印
+logging:
+  level:
+    top.wfaceboss.springcloud.service.PaymentFeignService: debug

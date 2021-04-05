@@ -1,0 +1,4 @@
+E:\wfaceboss\微服务\cloud2020-study\nacos-alibaba-fusing-consumer-openfeign-order-84\src\main\java\top\wfaceboss\springcloud\alibaba\service\PaymentService.java
+E:\wfaceboss\微服务\cloud2020-study\nacos-alibaba-fusing-consumer-openfeign-order-84\src\main\java\top\wfaceboss\springcloud\alibaba\MyHandler\PaymentFallbackService.java
+E:\wfaceboss\微服务\cloud2020-study\nacos-alibaba-fusing-consumer-openfeign-order-84\src\main\java\top\wfaceboss\springcloud\alibaba\OrderNacosOpenFeignApplication84.java
+E:\wfaceboss\微服务\cloud2020-study\nacos-alibaba-fusing-consumer-openfeign-order-84\src\main\java\top\wfaceboss\springcloud\alibaba\controller\CircleBreakerController.java

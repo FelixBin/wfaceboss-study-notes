@@ -1,0 +1,11 @@
+G:\wfaceboss\微服务\cloud2020-study\nacos-seata-order-service2001\src\main\java\top\wfaceboss\springcloud\alibaba\dao\OrderDao.java
+G:\wfaceboss\微服务\cloud2020-study\nacos-seata-order-service2001\src\main\java\top\wfaceboss\springcloud\alibaba\controller\OrderController.java
+G:\wfaceboss\微服务\cloud2020-study\nacos-seata-order-service2001\src\main\java\top\wfaceboss\springcloud\alibaba\service\AccountService.java
+G:\wfaceboss\微服务\cloud2020-study\nacos-seata-order-service2001\src\main\java\top\wfaceboss\springcloud\alibaba\SeataOrderMainApp2001.java
+G:\wfaceboss\微服务\cloud2020-study\nacos-seata-order-service2001\src\main\java\top\wfaceboss\springcloud\alibaba\service\OrderService.java
+G:\wfaceboss\微服务\cloud2020-study\nacos-seata-order-service2001\src\main\java\top\wfaceboss\springcloud\alibaba\domain\Order.java
+G:\wfaceboss\微服务\cloud2020-study\nacos-seata-order-service2001\src\main\java\top\wfaceboss\springcloud\alibaba\service\Impl\OrderServiceImpl.java
+G:\wfaceboss\微服务\cloud2020-study\nacos-seata-order-service2001\src\main\java\top\wfaceboss\springcloud\alibaba\domain\CommonResult.java
+G:\wfaceboss\微服务\cloud2020-study\nacos-seata-order-service2001\src\main\java\top\wfaceboss\springcloud\alibaba\service\StorageService.java
+G:\wfaceboss\微服务\cloud2020-study\nacos-seata-order-service2001\src\main\java\top\wfaceboss\springcloud\alibaba\config\MyBatisConfig.java
+G:\wfaceboss\微服务\cloud2020-study\nacos-seata-order-service2001\src\main\java\top\wfaceboss\springcloud\alibaba\config\DataSourceProxyConfig.java

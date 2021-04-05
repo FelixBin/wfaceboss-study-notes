@@ -1,0 +1,5 @@
+top\wfaceboss\springcloud\ColonyEurekaPaymentMain8001.class
+top\wfaceboss\springcloud\controller\PaymentController.class
+top\wfaceboss\springcloud\service\impl\PaymentServiceImpl.class
+top\wfaceboss\springcloud\service\PaymentService.class
+top\wfaceboss\springcloud\dao\PaymentDao.class

@@ -1,0 +1,20 @@
+###服务端口号
+server:
+  port: 7002
+###eureka 基本信息配置
+spring:
+  application:
+    name: gateway-eureka-server-7002
+eureka:
+  instance:
+    ###注册到eureka  ip地址
+    hostname: 127.0.0.1
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:7001/eureka/   # 将本中心注册到指定中心上
+      ###需要将我的服务注册到注册中心
+      register-with-eureka: true
+      ###是否需要从eureka上获取注册信息（需要检索服务）
+      fetch-registry: true
+
+

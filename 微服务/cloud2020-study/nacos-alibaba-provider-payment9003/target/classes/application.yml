@@ -1,0 +1,16 @@
+server:
+  port: 9003
+
+spring:
+  application:
+    name: nacos-payment-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 121.37.164.246:1111 #配置Nacos  远程地址
+
+management: #暴露监控端点
+  endpoints:
+    web:
+      exposure:
+        include: '*'

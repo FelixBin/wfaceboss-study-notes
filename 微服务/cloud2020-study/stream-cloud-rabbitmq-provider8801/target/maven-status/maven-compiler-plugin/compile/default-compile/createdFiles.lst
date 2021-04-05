@@ -1,0 +1,4 @@
+top\wfaceboss\springcloud\service\IMessageProvider.class
+top\wfaceboss\springcloud\service\Impl\MessageProviderImpl.class
+top\wfaceboss\springcloud\StreamProviderMain8801.class
+top\wfaceboss\springcloud\controller\SendMessageController.class
