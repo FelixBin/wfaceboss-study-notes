@@ -2086,7 +2086,7 @@ public class AppClinet {
 
 
 
-![img](https://qqadapt.qpic.cn/txdocpic/0/f9c8567375843a8632d6adad11ec30b9/0?w=1413&h=948)
+![admin](SpringBoot2.0.assets/admin.png)
 
 # **十 性能优化**
 
@@ -2164,7 +2164,7 @@ public class App01 {
 
 本地项目调优
 
-![img](https://qqadapt.qpic.cn/txdocpic/0/af686538c59d96af35ba454545e6cadd/0?_type=png&w=623&h=311)
+![性能](SpringBoot2.0.assets/性能.png)
 
 外部运行调优
 
@@ -2185,13 +2185,13 @@ java -server -Xms32m -Xmx32m  -jar springboot_v2.jar
 
 前提：已经安装rabbitmq
 
-![img](https://qqadapt.qpic.cn/txdocpic/0/523a02cd3b9f14c84196d7d943e5411d/0?w=1366&h=300)
+![mq](SpringBoot2.0.assets/mq.png)
 
 ## **11.1 创建maven工程(idea)**
 
 
 
-![img](https://qqadapt.qpic.cn/txdocpic/0/ed6d1cdad7e231eb4df854ff3a2f1090/0?w=863&h=46)
+![流程](SpringBoot2.0.assets/流程.png)
 
 ## **11.2** 在主项目工程的pom文件里填写依赖(注意是主项目 两个子项目会继承父项目的依赖)
 
@@ -2252,9 +2252,7 @@ java -server -Xms32m -Xmx32m  -jar springboot_v2.jar
 
 ### **11.3.1 Producer 消息生产者**
 
-
-
-![img](https://qqadapt.qpic.cn/txdocpic/0/acacbeb3555e9f3663c29bfa3426762a/0?w=845&h=29)
+![生产者](SpringBoot2.0.assets/生产者.png)
 
 ①新建`application.yml`
 
@@ -2391,15 +2389,11 @@ public class ProducerController {
 
 访问` http://localhost:8082/sendMsg?queueName=new_fanout_email_queue ` #使用外部指定队列发送到指定队列上
 
-![img](https://qqadapt.qpic.cn/txdocpic/0/03c4afbfa81ee1d6ad54b3b123a13905/0?w=819&h=140)
+![队列](SpringBoot2.0.assets/队列.png)
 
 ### **11.3.2 Consumer 消息消费者**
 
-
-
-![img](https://qqadapt.qpic.cn/txdocpic/0/008b2f1bb502a9a65eb4ff4cc9926e67/0?w=851&h=24)
-
-
+![消费者](SpringBoot2.0.assets/消费者.png)
 
 ①新建`application.yml`
 
@@ -2884,7 +2878,7 @@ public class WebAppConfig {
 	</build>
 ```
 
-![img](https://qqadapt.qpic.cn/txdocpic/0/550394275d6676d247807713f31236c0/0?_type=png&w=685&h=76)
+![属性](SpringBoot2.0.assets/属性.png)
 
 Java jar 执行的时候报错 ' 不是内部或外部命令 说明 jdk环境没有安装
 
