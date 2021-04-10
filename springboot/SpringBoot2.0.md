@@ -10,13 +10,13 @@ Spring Boot让我们的Spring应用变的更轻量化。比如：你可以仅仅
 
 Spring Boot的主要优点：
 
-为所有Spring开发者更快的入门
+- 为所有Spring开发者更快的入门
 
-开箱即用，提供各种默认配置来简化项目配置
+- 开箱即用，提供各种默认配置来简化项目配置
 
-内嵌式容器简化Web项目
+- 内嵌式容器简化Web项目
 
-没有冗余代码生成和XML配置的要求
+- 没有冗余代码生成和XML配置的要求
 
 本章主要目标完成Spring Boot基础项目的构建，并且实现一个简单的Http请求处理，通过这个例子对Spring Boot有一个初步的了解，并体验其结构简单、开发快速的特性。
 
@@ -28,19 +28,19 @@ SpringMVC是控制层。
 
 
 
-**SpringBoot 是一个快速开发的框架,能够快速的整合第三方框架**，--原理（Maven依赖封装）
+- **SpringBoot 是一个快速开发的框架,能够快速的整合第三方框架**，--原理（Maven依赖封装）
 
-简化XML配置，全部采用**注解形式**，--spring 体系支持注解启动，只是做了包装
+- 简化XML配置，全部采用**注解形式**，--spring 体系支持注解启动，只是做了包装
 
-**内置Tomcat容器**,（tomcat,jetty,undertow）---java语言创建服务器
+- **内置Tomcat容器**,（tomcat,jetty,undertow）---java语言创建服务器
 
 
 
 ## **1.2、系统要求**
 
-java1.8及以上
+- java1.8及以上
 
-Spring Framework 5及以上
+- Spring Framework 5及以上
 
 **本文采用**Java 1.8.0_73**、**Spring Boot 2.1.8 版本**调试通过。**
 
@@ -48,9 +48,9 @@ Spring Framework 5及以上
 
 ## **1.3、SpringBoot和SpringMVC区别**
 
-SpringBoot 是一个快速开发的框架,能够快速的整合第三方框架，简化XML配置，全部采用注解形式，内置Tomcat容器,帮助开发者能够实现快速开发，SpringBoot的Web组件 默认集成的是SpringMVC框架。
+- SpringBoot 是一个快速开发的框架,能够快速的整合第三方框架，简化XML配置，全部采用注解形式，内置Tomcat容器,帮助开发者能够实现快速开发，0- - SpringBoot的Web组件 默认集成的是SpringMVC框架。
 
-SpringMVC是控制层。
+- SpringMVC是控制层。
 
 
 
@@ -58,11 +58,11 @@ SpringMVC是控制层。
 
 ### **1.4、SpringBoot和SpringCloud区别**
 
-**SpringBoot 是一个快速开发的框架,能够快速的整合第三方框架，简化XML配置，全部采用注解形式，内置Tomcat容器**,帮助开发者能够实现快速开发，SpringBoot的Web组件 默认集成的是SpringMVC框架。
+- **SpringBoot 是一个快速开发的框架,能够快速的整合第三方框架，简化XML配置，全部采用注解形式，内置Tomcat容器**,帮助开发者能够实现快速开发，SpringBoot的Web组件 默认集成的是SpringMVC框架。
 
-SpringMVC是控制层。
+- SpringMVC是控制层。
 
-SpringCloud依赖于SpringBoot组件，使用SpringMVC编写Http协议接口，同时**SpringCloud是一套完整的微服务解决框架**。
+- SpringCloud依赖于SpringBoot组件，使用SpringMVC编写Http协议接口，同时**SpringCloud是一套完整的微服务解决框架**。
 
 **1.5常见错误**
 
@@ -82,11 +82,9 @@ org.apache.maven.archiver.MavenArchiver.getManifest(org.apache.maven.project.Mav
 
 **名为”springboot-helloworld” 类型为Jar工程项目**
 
-![img](https://qqadapt.qpic.cn/txdocpic/0/534323711a56ab48daa8678bbc06b8a8/0?_type=png&w=693&h=589)
+![创建](SpringBoot2.0.assets/创建.png)
 
 ## **2.2、pom文件引入依赖**
-
-
 
 
 
@@ -106,17 +104,27 @@ org.apache.maven.archiver.MavenArchiver.getManifest(org.apache.maven.project.Mav
 
 
 
-|                                                              |
-| ------------------------------------------------------------ |
-| **spring-boot-starter-parent作用****在pom.xml中引入spring-boot-start-parent,spring官方的解释叫什么stater poms,它可以提供dependency management,也就是说依赖管理，引入以后在申明其它dependency的时候就不需要version了，后面可以看到。****spring-boot-starter-web作用****springweb 核心组件****spring-boot-maven-plugin作用** **如果我们要直接Main启动spring，那么以下plugin必须要添加，否则是无法启动的。如果使用maven 的spring-boot:run的话是不需要此配置的。（我在测试的时候，如果不配置下面的plugin也是直接在Main中运行的。）** |
+- **spring-boot-starter-parent作用**
+
+在`pom.xml`中引入`spring-boot-start-parent`,spring官方的解释叫什么stater poms,它可以提供dependency management,也就是说依赖管理，引入以后在申明其它dependency的时候就不需要version了，后面可以看到
+
+- **spring-boot-starter-web作用**
+
+springweb 核心组件
+
+- **spring-boot-maven-plugin作用**
+
+如果我们要直接Main启动spring，那么以下plugin必须要添加，否则是无法启动的。如果使用maven 的spring-boot:run的话是不需要此配置的。（我在测试的时候，如果不配置下面的plugin也是直接在Main中运行的。）
+
+
 
 
 
 **2.3、编写HelloWorld服务**
 
-创建package命名为top.wfaceboss.api.service（根据实际情况修改）
+创建package命名为`top.wfaceboss.api.service`（根据实际情况修改）
 
-创建HelloService类，内容如下
+创建`HelloService类`，内容如下
 
 ```
 @RestController
@@ -134,7 +142,7 @@ public static void main(String[] args) {
 
 ## **2.4、@RestController**
 
-**在上加上RestController 表示修饰该Controller所有的方法返回JSON格式,直接可以编写Restful接口**
+**在上加上`RestController `表示修饰该Controller所有的方法返回JSON格式,直接可以编写Restful接口**
 
 ## **2.5、@EnableAutoConfiguration**
 
@@ -142,11 +150,11 @@ public static void main(String[] args) {
 
 这个注解告诉Spring Boot根据添加的jar依赖猜测你想如何配置Spring。由于spring-boot-starter-web添加了Tomcat和Spring MVC，所以auto-configuration将假定你正在开发一个web应用并相应地对Spring进行设置。
 
-@EnableAutoConfiguration扫包范围：当前类
+- @EnableAutoConfiguration扫包范围：当前类
 
-@ComponentScan作用范围：指定包范围
+- @ComponentScan作用范围：指定包范围
 
-## **2.6 SpringApplication.run(HelloController.****class****,** **args****);**
+## **2.6 SpringApplication.run(HelloController.class, args);**
 
    标识为启动类
 
@@ -168,11 +176,11 @@ public static void main(String[] args) {
 }
 ```
 
-启动主程序，打开浏览器访问http://localhost:8080/index，可以看到页面输出Hello World
+启动主程序，打开浏览器访问`http://localhost:8080/index `，可以看到页面输出Hello World
 
 ## **2.8、SpringBoot启动方式2**
 
-@ComponentScan(basePackages = "top.wfaceboss.api.service")---控制扫包范围
+`@ComponentScan(basePackages = "top.wfaceboss.api.service")`---控制扫包范围
 
 ```
 @ComponentScan(basePackages = "top.wfaceboss.api.service")
@@ -186,11 +194,11 @@ public class App {
 
 ## **2.9、SpringBoot启动方式3**
 
-@SpringBootApplication
+`@SpringBootApplication`
 
-@SpringBootApplication 被 @Configuration、@EnableAutoConfiguration、@ComponentScan 注解所修饰，换言之 Springboot 提供了统一的注解来替代以上三个注解
+`@SpringBootApplication` 被 `@Configuration`、`@EnableAutoConfiguration`、`@ComponentScan` 注解所修饰，换言之 Springboot 提供了统一的注解来替代以上三个注解
 
-**扫包范围：在启动类上加上@SpringBootApplication注解,当前包下或者子包下所有的类都可以扫到。--扫包范围：当前同级包及一下子包**
+**扫包范围：在启动类上加上`@SpringBootApplication`注解,当前包下或者子包下所有的类都可以扫到。--扫包范围：当前同级包及一下子包**
 
 **将**AppSpringBoot 建立在api层同级有controller以及service
 
@@ -221,11 +229,11 @@ SpringApplication启动的类必须是@SpringBootApplication注解标注的类
 
 ## **3.1、静态资源访问**
 
-**1.以jar包的方式引入三方静态资源**
+**1 以jar包的方式引入三方静态资源**
 
-注:所有 /webjars/** ，都去 classpath:/META-INF/resources/webjars/ 找资源；
+注:所有` /webjars/** `，都去 `classpath:/META-INF/resources/webjars/ `找资源；
 
-原因：*WebMvcAuotConfiguration*
+原因：`*WebMvcAuotConfiguration*`
 
 ​	
 
@@ -303,29 +311,31 @@ public void addResourceHandlers(ResourceHandlerRegistry registry) {
 
 **"/\**"** 访问当前项目的任何资源，都去（静态资源的文件夹）找映射
 
-默认配置
+**2 默认配置**
 
 Spring Boot默认提供静态资源目录位置需置于classpath(类路径)下，**目录名**需符合如下规则：
 
-/static
+- /static
 
-/public
+- /public
 
-/resources	
+- /resources	
 
-/META-INF/resources
+- /META-INF/resources
 
-举例：我们可以在src/main/resources/目录下创建static，在该位置放置一个图片文件。启动程序后，尝试访问http://localhost:8080/D.jpg。如能显示图片，配置成功。
+举例：我们可以在`src/main/resources/`目录下创建`static`，在该位置放置一个图片文件。启动程序后，尝试访问`http://localhost:8080/D.jpg`。如能显示图片，配置成功。
 
 注意：若出现404重新rebuild 在运行、
 
-3 欢迎页； 静态资源文件夹下的所有index.html页面；被"/**"映射；
+**3  欢迎页**
+
+静态资源文件夹下的所有index.html页面；被"/**"映射；
 
 localhost:8080/   找index页面
 
 
 
-4 所有的 **/favicon.ico 都是在静态资源文件下找；
+**4 所有的	` **/favicon.ico` 都是在静态资源文件下找**
 
 
 
@@ -335,7 +345,7 @@ localhost:8080/   找index页面
 
 ## **3.2、渲染Web页面**
 
-![img](https://qqadapt.qpic.cn/txdocpic/0/171efd3f5b7aa4c59a3d36a5a6e86b45/0?_type=png&w=803&h=382)
+![web页面](SpringBoot2.0.assets/web页面.png)
 
 渲染Web页面
 
@@ -349,19 +359,19 @@ localhost:8080/   找index页面
 
 Spring Boot提供了默认配置的**模板引擎**主要有以下几种：
 
-**Thymeleaf**
+- **Thymeleaf**
 
-FreeMarker
+- FreeMarker
 
-Velocity
+- Velocity
 
-Groovy
+- Groovy
 
-Mustache
+- Mustache
 
 Spring Boot建议使用这些模板引擎，避免使用JSP，若一定要使用JSP将无法实现Spring Boot的多种特性，具体可见后文：支持JSP的配置
 
-当你使用上述模板引擎中的任何一个，它们**默认的模板配置路径**为：src/main/resources/templates。当然也可以修改这个路径，具体如何修改，可在后续各模板引擎的配置属性中查询并修改。
+当你使用上述模板引擎中的任何一个，它们**默认的模板配置路径**为：`src/main/resources/templates`。当然也可以修改这个路径，具体如何修改，可在后续各模板引擎的配置属性中查询并修改。
 
 ## **3.3、Freemarker模板引擎渲染web视图**
 
@@ -468,7 +478,7 @@ spring.freemarker.template-loader-path=classpath:/templates/
 #spring.freemarker.view-names= # whitelist of view names that can be resolved
 ```
 
-或者application.yml文件
+或者`application.yml`文件
 
 
 
@@ -567,7 +577,7 @@ public class indexController {
 
 ### **3.5.3 前台代码**
 
-在src/main/resource/创建一个templates文件夹,后缀为*.html
+在src/main/resource/创建一个templates文件夹,后缀为`*.html`
 
 ```
 <!DOCTYPE HTML>
@@ -599,7 +609,7 @@ public class ThymeleafProperties {
 
 **使用：**
 
-*导入thymeleaf的名称空间；---起提示作用*
+*导入thymeleaf的名称空间；*---起提示作用
 
 ```
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
@@ -607,7 +617,7 @@ public class ThymeleafProperties {
 
 ### **3.5.4 thymeleaf配置文件**
 
-在src/main/resource/创建一个application.yml
+在src/main/resource/创建一个`application.yml`
 
 ```
 ###ThymeLeaf配置
@@ -644,19 +654,19 @@ public class App {
 
 ## **3.6、全局捕获异常**
 
-@ExceptionHandler 表示拦截异常
+- @ExceptionHandler 表示拦截异常
 
-@ControllerAdvice 是 controller 的一个辅助类，最常用的就是作为全局异常处理的切面类
+- @ControllerAdvice 是 controller 的一个辅助类，最常用的就是作为全局异常处理的切面类
 
-@ControllerAdvice 可以指定扫描范围
+- @ControllerAdvice 可以指定扫描范围
 
-@ControllerAdvice 约定了几种可行的返回值，如果是直接返回 model 类的话，需要使用 @ResponseBody 进行 json 转换
+- @ControllerAdvice 约定了几种可行的返回值，如果是直接返回 model 类的话，需要使用 @ResponseBody 进行 json 转换
 
 返回 String，表示跳到某个 view
 
 返回 modelAndView
 
-返回 model + @ResponseBody
+返回 `model + @ResponseBody`
 
 ```
 @ControllerAdvice
@@ -1240,9 +1250,9 @@ public interface User1Mapper {
 
 ### **4.4.4 多数据源事务注意事项**
 
-在多数据源的情况下，使用@Transactional注解时，应该指定事务管理者
+在多数据源的情况下，使用`@Transactional`注解时，应该指定事务管理者
 
-@Transactional(transactionManager = "test2TransactionManager")
+`@Transactional(transactionManager = "test2TransactionManager")`
 
 ### **4.4.5 启动项目**
 
@@ -1285,7 +1295,7 @@ Springboot2.0的时候 不报错
 
 ## **5.2 SpringBoot分布式事务管理**
 
-使用springboot+jta+atomikos 分布式事物管理
+使用`springboot+jta+atomikos `分布式事物管理
 
 Atomikos 是一个为Java平台提供增值服务的并且开源类事务管理器。
 
@@ -1471,31 +1481,33 @@ public class MyBatisConfig2 {
 
 *JUL、JCL、Jboss-logging、logback、log4j、log4j2、slf4j…*
 
-![img](https://qqadapt.qpic.cn/txdocpic/0/f2c2633395b50498df95efefae7df96a/0?_type=png&w=874&h=94)
+![0(1)](SpringBoot2.0.assets/0(1).png)
+
+
 
 **日志的抽象层：**
 
-**JCL（Jakarta Commons Logging）---->最后一次更新2014年**
+- **JCL（Jakarta Commons Logging）---->最后一次更新2014年**
 
-**jboss-logging-------------->使用的场景太少了**
+- **jboss-logging-------------->使用的场景太少了**
 
-**SLF4j了----------->springboot中使用的日志抽象层**
+- **SLF4j了----------->springboot中使用的日志抽象层**
 
 **日志实现：**
 
-**Logback----->Log4j的升级版本出至于同一个人开发------>又写出了SLF4j的日志抽象层使用起来更加灵活**
+- **Logback----->Log4j的升级版本出至于同一个人开发------>又写出了SLF4j的日志抽象层使用起来更加灵活**
 
-**JUL（java.util.logging）--------->java util包下**
+- **JUL（java.util.logging）--------->java util包下**
 
-**Log4j2--------->apache下生产的日志框架**
+- **Log4j2--------->apache下生产的日志框架**
 
-**SpringBoot选用 SLF4j和logback**
+- **SpringBoot选用 SLF4j和logback**
 
 **6.1 使用log4j记录日志**
 
 ### **6.1.1 新建log4j配置文件**
 
-文件名称log4j.properties，注意路径
+文件名称`log4j.properties`，注意路径
 
 ```
 #log4j.rootLogger=CONSOLE,info,error,DEBUG
@@ -1807,13 +1819,13 @@ public void remoKey() {
 @RestController
 @Slf4j
 public class IndexController {
-	@Value("${itmayiedu}")
-	private String itmayieduName;
+	@Value("${wfaceboss}")
+	private String wfacebossName;
 	@RequestMapping("/index")
 	public String index() {
 		String result = "springboot2.0 V1.0";
 		log.info("result:{}", result);
-		return result + itmayieduName;
+		return result + wfacebossName;
 	}
 }
 ```
@@ -2080,17 +2092,17 @@ public class AppClinet {
 
 **组件自动扫描带来的问题**
 
-默认情况下，我们会使用 @SpringBootApplication 注解来自动获取应用的配置信息，但这样也会给应用带来一些副作用。使用这个注解后，会触发自动配置（ auto-configuration ）和 组件扫描 （ component scanning ），这跟使用 @Configuration、@EnableAutoConfiguration 和 @ComponentScan 三个注解的作用是一样的。这样做给开发带来方便的同时，也会有三方面的影响：
+默认情况下，我们会使用 `@SpringBootApplication` 注解来自动获取应用的配置信息，但这样也会给应用带来一些副作用。使用这个注解后，会触发自动配置（ auto-configuration ）和 组件扫描 （ component scanning ），这跟使用 @Configuration、@EnableAutoConfiguration 和 @ComponentScan 三个注解的作用是一样的。这样做给开发带来方便的同时，也会有三方面的影响：
 
-1、会导致项目启动时间变长。当启动一个大的应用程序,或将做大量的集成测试启动应用程序时，影响会特别明显。
+- 会导致项目启动时间变长。当启动一个大的应用程序,或将做大量的集成测试启动应用程序时，影响会特别明显。
 
-2、会加载一些不需要的多余的实例（beans）。
+- 会加载一些不需要的多余的实例（beans）。
 
-3、会增加 CPU 消耗。
+- 会增加 CPU 消耗。
 
 ## **10.1 自动扫描优化**
 
-针对以上三个情况，我们可以移除 @SpringBootApplication 和 @ComponentScan 两个注解来禁用组件自动扫描，然后在我们需要的 bean 上进行显式配置：
+针对以上三个情况，我们可以移除 `@SpringBootApplication` 和 `@ComponentScan`两个注解来禁用组件自动扫描，然后在我们需要的 bean 上进行显式配置：
 
 ```
 //// 移除 @SpringBootApplication and @ComponentScan, 用 @EnableAutoConfiguration 来替代
@@ -2244,7 +2256,7 @@ java -server -Xms32m -Xmx32m  -jar springboot_v2.jar
 
 ![img](https://qqadapt.qpic.cn/txdocpic/0/acacbeb3555e9f3663c29bfa3426762a/0?w=845&h=29)
 
-①新建application.yml
+①新建`application.yml`
 
 ```
 spring:
@@ -2260,7 +2272,7 @@ server:
 
 
 
-②新建RabbitMqConfig配置类
+②新建`RabbitMqConfig`配置类
 
 ```
 @Component //注到容器中
@@ -2377,7 +2389,7 @@ public class ProducerController {
 }
 ```
 
-访问 http://localhost:8082/sendMsg?queueName=new_fanout_email_queue  #使用外部指定队列发送到指定队列上
+访问` http://localhost:8082/sendMsg?queueName=new_fanout_email_queue ` #使用外部指定队列发送到指定队列上
 
 ![img](https://qqadapt.qpic.cn/txdocpic/0/03c4afbfa81ee1d6ad54b3b123a13905/0?w=819&h=140)
 
@@ -2389,7 +2401,7 @@ public class ProducerController {
 
 
 
-①新建application.yml
+①新建`application.yml`
 
 ```
 spring:
@@ -2420,7 +2432,7 @@ public class ConsumerApp {
 
 ③测试
 
- 监听new_fanout_email_queue队列上的信息。
+ 监听`new_fanout_email_queue`队列上的信息。
 
 ```
 @Component
@@ -2497,25 +2509,17 @@ Jetty
 
 要求Jetty最低版本为9.4。
 
-
-
 Tomcat
 
 要求Tomcat最低版本为8.5。
-
-
 
 Hibernate
 
 要求Hibernate最低版本为5.2。
 
-
-
 Gradle
 
 要求Gradle最低版本为3.4。
-
-
 
 SendGrid
 
@@ -2523,11 +2527,9 @@ SendGrid最低支持版本是3.2。为了支持这次升级，username和passwor
 
 
 
-
-
 # **十三 其他内容**
 
-## **13.1、使用@Scheduled创建定时任务**
+## **13.1、使用`@Scheduled`创建定时任务**
 
 ### **13.1.1 pom.xml 依赖引入**
 
@@ -2570,11 +2572,11 @@ public class App
 
 
 
-*@EnableScheduling**注解，用于开启定时任务*
+**@EnableScheduling注解，用于开启定时任务**
 
 ### **13.1.3 编写定时任务**
 
-在Spring Boot的主类中加入@EnableScheduling注解，启用定时任务的配置
+在Spring Boot的主类中加入`@EnableScheduling`注解，启用定时任务的配置
 
 ```
 @Component
@@ -2591,9 +2593,9 @@ public class ScheduledTasks {
 
 ## **13.2、使用@Async实现异步调用**
 
-启动加上@EnableAsync ,需要执行异步方法上加入	@Async
+启动加上`@EnableAsync` ,需要执行`异步`方法上加入	`@Async`
 
-在方法上加上@Async之后 底层使用多线程技术
+在方法上加上`@Async`之后 底层使用多线程技术
 
 **13.2.1、Maven依赖**
 
@@ -2682,7 +2684,7 @@ name=wfaceboss.top
 ```
 	@Value("${name}")
 	private String name;
-@ResponseBody
+	@ResponseBody
 	@RequestMapping("/getValue")
 	public String getValue() {
 		return name;
@@ -2697,7 +2699,13 @@ name=wfaceboss.top
 
 
 
-application-dev.yml：开发环境application-test.yml：测试环境application-pre.yml：预发布环境application-prod.yml：生产环境
+- `application-dev.yml`：开发环境:
+
+- `application-test.yml`:测试环境:
+
+- `application-pre.yml`：预发布环境
+
+- `application-prod.yml`：生产环境
 
 激活指定环境
 
@@ -2742,7 +2750,7 @@ server.context-path=/wfaceboss
 
 ## **13.6、SpringBoot yml 使用**
 
-SpringBoot 默认读取 application.yml|properties
+SpringBoot 默认读取 `application.yml|properties`
 
 YML 比properties配置文件更加节约 简约（结构）
 
@@ -2825,21 +2833,21 @@ public class WebAppConfig {
 
 ### **Jar类型打包方式**
 
-1.使用mvn celan  package 打包
+1.使用`mvn celan  package` 打包
 
-2.使用java –jar 包名
+2.使用`java –jar` 包名
 
 **war类型打包方式**
 
-1.使用mvn celan package 打包
+1.使用`mvn celan package` 打包
 
-2.使用java –jar 包名 
+2.使用`java –jar` 包名 
 
 ### **外部Tomcat运行**
 
-1.使用mvn celan package 打包
+1.使用`mvn celan package` 打包
 
-2.2.0将war包 放入到tomcat webapps下运行即可。
+2.将war包 放入到tomcat webapps下运行即可。
 
 注意:springboot2.0内置tomcat8.5.25，建议使用外部Tomcat9.0版本运行即可,否则报错版本不兼容。
 
@@ -2882,30 +2890,22 @@ Java jar 执行的时候报错 ' 不是内部或外部命令 说明 jdk环境没
 
 **springboot打jar包配置**
 
-*打包方式用的是spring-boot-maven-plugin插件打包*
+打包方式用的是`spring-boot-maven-plugin`插件打包
 
-
-
+```
 <plugins>
 
 ​      <plugin>
-
 ​          <groupId>org.springframework.boot</groupId>
-
 ​          <artifactId>spring-boot-maven-plugin</artifactId>
-
 ​          <executions>
-
 ​              <execution>
-
 ​                  <goals>
-
 ​                       <goal>repackage</goal>
-
 ​                   </goals>
-
 ​                </execution>
-
 ​          </executions>
 
 </plugin>
+```
+
