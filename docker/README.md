@@ -215,7 +215,7 @@ Docker 本身是一个容器运行载体或称之为管理引擎。我们把应�
 
 1.  官网地址
 
-[[英文地址]{.ul}](https://docs.docker.com/install/linux/docker-ce/centos/) [[中文地址]{.ul}](https://docs.docker-cn.com/engine/installation/linux/docker-ce/centos/#prerequisites)
+[[英文地址]](https://docs.docker.com/install/linux/docker-ce/centos/) [[中文地址]](https://docs.docker-cn.com/engine/installation/linux/docker-ce/centos/#prerequisites)
 
 2.  确定版本
 
@@ -402,7 +402,6 @@ docker run hello-world
 ```
 
 
-
 2.  效果
 
 ![image-20210305175456875](README.assets/image-20210305175456875.png)
@@ -470,7 +469,7 @@ docker --help
 命令：
 
 ```
-docker images [OPTIONS] [REPOSITORY[:TAG\]\]
+docker images [OPTIONS] [REPOSITORY[:TAG]]
 ```
 
 **OPTIONS说明：**
